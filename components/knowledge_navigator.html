@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Knowledge Navigator</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/force-graph"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #7c3aed;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-bg: #1f2937;
+            --light-bg: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            min-height: 600px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: white;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        /* Graph Container */
+        .graph-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #knowledge-graph {
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Info Panel */
+        .info-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            max-width: 300px;
+            display: none;
+        }
+
+        .info-panel.active {
+            display: block;
+        }
+
+        .info-panel h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .info-panel .meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .info-panel .description {
+            margin-bottom: 1rem;
+        }
+
+        .info-panel .links {
+            margin-top: 1rem;
+        }
+
+        .info-panel .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .link-type {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            background: var(--light-bg);
+        }
+
+        /* Learning Path */
+        .learning-path {
+            margin-top: 2rem;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .path-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .path-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: var(--light-bg);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .path-step:hover {
+            transform: translateX(5px);
+            background: #e5e7eb;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+
+            .info-panel {
+                position: static;
+                margin-top: 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Node Colors */
+        .node-beginner { fill: #10b981; }
+        .node-intermediate { fill: #3b82f6; }
+        .node-advanced { fill: #8b5cf6; }
+        .node-expert { fill: #ef4444; }
+
+        /* Relationship Line Styles */
+        .line-prerequisite { stroke: #10b981; stroke-dasharray: 5,5; }
+        .line-application { stroke: #3b82f6; }
+        .line-extension { stroke: #8b5cf6; stroke-dasharray: 2,2; }
+        .line-similar { stroke: #f59e0b; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Knowledge Navigator</h1>
+            <p class="subtitle">Explore interconnected AI concepts and learning paths</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>Explore & Filter</h3>
+
+                <input type="text" class="search-box" id="searchInput" placeholder="Search concepts...">
+
+                <div class="filter-group">
+                    <label>Difficulty Level</label>
+                    <select class="filter-select" id="difficultyFilter">
+                        <option value="">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="theory">Theory</option>
+                        <option value="implementation">Implementation</option>
+                        <option value="application">Application</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Relationship Types</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="PREREQUISITE_OF" checked>
+                            <span>Prerequisites</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="APPLICATION_OF" checked>
+                            <span>Applications</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="EXTENDS" checked>
+                            <span>Extensions</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="SIMILAR_TO" checked>
+                            <span>Similar Concepts</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Learning Paths</label>
+                    <select class="filter-select" id="pathSelect">
+                        <option value="">Select Path</option>
+                        <option value="beginner">Beginner Path</option>
+                        <option value="nlp_specialist">NLP Specialist</option>
+                        <option value="cv_specialist">CV Specialist</option>
+                        <option value="ai_researcher">AI Researcher</option>
+                        <option value="practitioner">Practitioner</option>
+                    </select>
+                </div>
+            </aside>
+
+            <main class="graph-container">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                </div>
+                <div id="knowledge-graph" style="display: none;"></div>
+
+                <div class="info-panel" id="infoPanel">
+                    <h4 id="conceptName">Concept Name</h4>
+                    <div class="meta" id="conceptMeta">
+                        <span id="conceptSection">Section</span> •
+                        <span id="conceptDifficulty">Difficulty</span>
+                    </div>
+                    <div class="description" id="conceptDescription"></div>
+                    <div class="links" id="conceptLinks"></div>
+                </div>
+
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color node-beginner"></div>
+                        <span>Beginner</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color node-intermediate"></div>
+                        <span>Intermediate</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color node-advanced"></div>
+                        <span>Advanced</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color node-expert"></div>
+                        <span>Expert</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="learning-path" id="learningPath" style="display: none;">
+            <h3>Learning Path: <span id="pathName"></span></h3>
+            <div class="path-steps" id="pathSteps"></div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the knowledge graph
+        let graphData = null;
+        let filteredData = null;
+        let currentPath = null;
+
+        // Load data
+        async function loadData() {
+            try {
+                const [conceptsRes, relationshipsRes, pathsRes] = await Promise.all([
+                    fetch('cross_reference_output/concepts.json'),
+                    fetch('cross_reference_output/relationships.json'),
+                    fetch('cross_reference_output/learning_paths.json')
+                ]);
+
+                const concepts = await conceptsRes.json();
+                const relationships = await relationshipsRes.json();
+                const learningPaths = await pathsRes.json();
+
+                // Transform data for force-graph
+                graphData = {
+                    nodes: Object.values(concepts).map(c => ({
+                        id: c.id,
+                        name: c.name,
+                        section: c.section,
+                        category: c.category,
+                        difficulty: c.difficulty,
+                        tags: c.tags,
+                        val: 10 // Node size
+                    })),
+                    links: relationships.map(r => ({
+                        source: r.source,
+                        target: r.target,
+                        type: r.type,
+                        strength: r.strength
+                    }))
+                };
+
+                filteredData = JSON.parse(JSON.stringify(graphData));
+
+                // Hide loading, show graph
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('knowledge-graph').style.display = 'block';
+
+                // Initialize graph
+                initializeGraph();
+
+                // Setup event listeners
+                setupEventListeners();
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        // Initialize force-directed graph
+        function initializeGraph() {
+            const elem = document.getElementById('knowledge-graph');
+
+            const Graph = ForceGraph()(elem)
+                .graphData(filteredData)
+                .nodeId('id')
+                .nodeVal('val')
+                .nodeLabel(node => node.name)
+                .nodeAutoColorBy('difficulty')
+                .nodeColor(node => {
+                    const colors = {
+                        beginner: '#10b981',
+                        intermediate: '#3b82f6',
+                        advanced: '#8b5cf6',
+                        expert: '#ef4444'
+                    };
+                    return colors[node.difficulty] || '#6b7280';
+                })
+                .linkWidth(link => Math.sqrt(link.strength) * 2)
+                .linkDirectionalArrowLength(4)
+                .linkDirectionalArrowRelPos(1)
+                .linkCurvature(0.25)
+                .linkColor(link => {
+                    const colors = {
+                        PREREQUISITE_OF: '#10b981',
+                        APPLICATION_OF: '#3b82f6',
+                        EXTENDS: '#8b5cf6',
+                        SIMILAR_TO: '#f59e0b',
+                        IMPLEMENTS: '#ec4899'
+                    };
+                    return colors[link.type] || '#6b7280';
+                })
+                .onNodeClick(node => showNodeInfo(node))
+                .onNodeHover(node => {
+                    elem.style.cursor = node ? 'pointer' : 'grab';
+                });
+
+            // Store graph instance
+            window.graph = Graph;
+        }
+
+        // Show node information
+        function showNodeInfo(node) {
+            const panel = document.getElementById('infoPanel');
+            document.getElementById('conceptName').textContent = node.name;
+            document.getElementById('conceptSection').textContent = node.section;
+            document.getElementById('conceptDifficulty').textContent =
+                node.difficulty.charAt(0).toUpperCase() + node.difficulty.slice(1);
+
+            // Get related links
+            const relatedLinks = graphData.links.filter(
+                link => link.source === node.id || link.target === node.id
+            );
+
+            const linksHtml = relatedLinks.slice(0, 5).map(link => {
+                const relatedId = link.source === node.id ? link.target : link.source;
+                const relatedNode = graphData.nodes.find(n => n.id === relatedId);
+                const direction = link.source === node.id ? '→' : '←';
+
+                return `
+                    <div class="link-item">
+                        <span>${direction} ${relatedNode ? relatedNode.name : relatedId}</span>
+                        <span class="link-type">${link.type.replace('_', ' ')}</span>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('conceptLinks').innerHTML = linksHtml ||
+                '<p style="color: var(--text-secondary);">No direct relationships found</p>';
+
+            panel.classList.add('active');
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Search
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                filterGraph();
+            });
+
+            // Difficulty filter
+            document.getElementById('difficultyFilter').addEventListener('change', filterGraph);
+
+            // Category filter
+            document.getElementById('categoryFilter').addEventListener('change', filterGraph);
+
+            // Relationship type filters
+            document.querySelectorAll('.checkbox-group input').forEach(checkbox => {
+                checkbox.addEventListener('change', filterGraph);
+            });
+
+            // Learning path selection
+            document.getElementById('pathSelect').addEventListener('change', (e) => {
+                if (e.target.value) {
+                    showLearningPath(e.target.value);
+                } else {
+                    hideLearningPath();
+                }
+            });
+        }
+
+        // Filter graph based on current filters
+        function filterGraph() {
+            if (!graphData) return;
+
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const difficultyFilter = document.getElementById('difficultyFilter').value;
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const checkedRelationships = Array.from(
+                document.querySelectorAll('.checkbox-group input:checked')
+            ).map(cb => cb.value);
+
+            // Filter nodes
+            const filteredNodes = graphData.nodes.filter(node => {
+                // Search filter
+                if (searchTerm && !node.name.toLowerCase().includes(searchTerm)) {
+                    return false;
+                }
+
+                // Difficulty filter
+                if (difficultyFilter && node.difficulty !== difficultyFilter) {
+                    return false;
+                }
+
+                // Category filter
+                if (categoryFilter && node.category !== categoryFilter) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            const filteredNodeIds = new Set(filteredNodes.map(n => n.id));
+
+            // Filter links
+            const filteredLinks = graphData.links.filter(link => {
+                // Check if both nodes exist
+                if (!filteredNodeIds.has(link.source) || !filteredNodeIds.has(link.target)) {
+                    return false;
+                }
+
+                // Check relationship type
+                if (!checkedRelationships.includes(link.type)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            // Update graph
+            filteredData = {
+                nodes: filteredNodes,
+                links: filteredLinks
+            };
+
+            window.graph.graphData(filteredData);
+        }
+
+        // Show learning path
+        function showLearningPath(pathKey) {
+            const pathNames = {
+                beginner: 'Beginner Path',
+                nlp_specialist: 'NLP Specialist Path',
+                cv_specialist: 'Computer Vision Specialist Path',
+                ai_researcher: 'AI Researcher Path',
+                practitioner: 'AI Practitioner Path'
+            };
+
+            // Load learning path data
+            fetch('cross_reference_output/learning_paths.json')
+                .then(res => res.json())
+                .then(paths => {
+                    const path = paths[pathKey];
+                    if (path) {
+                        document.getElementById('pathName').textContent = pathNames[pathKey];
+
+                        const stepsHtml = path.map((conceptId, index) => {
+                            const concept = graphData.nodes.find(n => n.id === conceptId);
+                            if (!concept) return '';
+
+                            return `
+                                <div class="path-step">
+                                    <div class="step-number">${index + 1}</div>
+                                    <div>
+                                        <div style="font-weight: 500;">${concept.name}</div>
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                                            ${concept.section} • ${concept.difficulty}
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('');
+
+                        document.getElementById('pathSteps').innerHTML = stepsHtml;
+                        document.getElementById('learningPath').style.display = 'block';
+                    }
+                });
+        }
+
+        // Hide learning path
+        function hideLearningPath() {
+            document.getElementById('learningPath').style.display = 'none';
+        }
+
+        // Initialize on load
+        window.addEventListener('load', loadData);
+    </script>
+</body>
+</html>

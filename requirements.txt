@@ -1,0 +1,63 @@
+# Core Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+
+# Data Processing and Analytics
+pandas==2.1.4
+numpy==1.25.2
+scikit-learn==1.3.2
+
+# Visualization
+plotly==5.17.0
+plotly-dash==2.14.2
+
+# Database and Caching
+sqlite3
+redis==5.0.1
+aiofiles==23.2.1
+
+# System Monitoring
+psutil==5.9.6
+
+# Data Validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# HTTP Client
+httpx==0.25.2
+requests==2.31.0
+
+# Async Utilities
+asyncio-mqtt==0.16.1
+aiohttp==3.9.1
+
+# Testing and Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Logging and Monitoring
+loguru==0.7.2
+structlog==23.2.0
+
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+click==8.1.7
+rich==13.7.0
+
+# Optional: ML and AI (commented out to reduce dependencies)
+# torch==2.1.1
+# transformers==4.35.2
+# sentence-transformers==2.2.2
+
+# Optional: Additional monitoring (commented out)
+# prometheus-client==0.19.0
+# grafana-api==1.0.3
+# influxdb-client==1.38.0

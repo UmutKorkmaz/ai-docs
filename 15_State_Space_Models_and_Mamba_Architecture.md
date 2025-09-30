@@ -1,19 +1,33 @@
-# State Space Models and Mamba Architecture
+# State Space Models and Mamba Architecture (2024-2025 Edition)
 
 ## Introduction
 
-State Space Models (SSMs) represent a paradigm shift in sequence modeling, offering an efficient alternative to transformer architectures. Mamba, introduced in 2023-2024, is a breakthrough SSM architecture that addresses the quadratic complexity limitations of attention mechanisms while maintaining strong performance on long sequences.
+State Space Models (SSMs) have revolutionized sequence modeling in 2024-2025, offering efficient alternatives to transformer architectures with breakthrough performance on long sequences. This guide covers the latest advances including Mamba-2, Hydra, and cutting-edge SSM research that's reshaping the landscape of efficient AI.
+
+### Major Advances in 2024-2025
+
+- **Mamba-2**: State space duality and hardware-aware optimizations
+- **Hydra Mixture of Experts**: Scalable SSM-based architectures
+- **MambaVision**: SSMs for computer vision tasks
+- **Long-range SSMs**: Handling million-token sequences
+- **SSM-Transformer Hybrids**: Best of both worlds approaches
+- **Hardware-Aware SSMs**: Optimized for modern AI accelerators
+- **Multimodal SSMs**: Cross-modal state space modeling
+- **SSM Foundation Models**: Large-scale pre-trained SSM systems
 
 ## Table of Contents
 
 1. [State Space Models Fundamentals](#state-space-models-fundamentals)
-2. [Mamba Architecture Deep Dive](#mamba-architecture-deep-dive)
-3. [Structured State Space Models (S4)](#structured-state-space-models-s4)
-4. [Implementation and Code Examples](#implementation-and-code-examples)
-5. [Performance Comparisons](#performance-comparisons)
-6. [Applications and Use Cases](#applications-and-use-cases)
-7. [Training and Optimization](#training-and-optimization)
-8. [Integration with Existing Frameworks](#integration-with-existing-frameworks)
+2. [Mamba-2 Architecture (2024)](#mamba-2-architecture-2024)
+3. [Hydra and Mixture of Experts SSMs](#hydra-and-mixture-of-experts-ssms)
+4. [Advanced SSM Variants](#advanced-ssm-variants)
+5. [Structured State Space Models (S4)](#structured-state-space-models-s4)
+6. [Implementation and Code Examples](#implementation-and-code-examples)
+7. [Performance Comparisons](#performance-comparisons)
+8. [Applications and Use Cases](#applications-and-use-cases)
+9. [Training and Optimization](#training-and-optimization)
+10. [Integration with Existing Frameworks](#integration-with-existing-frameworks)
+11. [Future Research Directions](#future-research-directions)
 
 ---
 
@@ -60,6 +74,422 @@ timeline
     2024 : Mamba-2
          : State space duality
          : Improved efficiency
+```
+
+---
+
+## Mamba-2 Architecture (2024)
+
+### Introduction to Mamba-2
+
+Mamba-2, released in 2024, introduces several groundbreaking improvements over the original Mamba architecture, including state space duality, enhanced hardware awareness, and significantly improved performance characteristics.
+
+### Key Innovations in Mamba-2
+
+#### 1. State Space Duality
+
+State Space Duality (SSD) is the core theoretical breakthrough in Mamba-2, unifying different perspectives on state space modeling.
+
+```python
+
+class StateSpaceDuality:
+    def __init__(self, d_model, d_state):
+        self.d_model = d_model
+        self.d_state = d_state
+
+        # Dual parameterization
+        self.A = nn.Parameter(torch.randn(d_state, d_state))
+        self.B = nn.Parameter(torch.randn(d_model, d_state))
+        self.C = nn.Parameter(torch.randn(d_state, d_model))
+        self.D = nn.Parameter(torch.randn(d_model))
+
+        # Dual perspective matrices
+        self.P = nn.Parameter(torch.randn(d_state, d_state))  # Transformation matrix
+        self.Q = nn.Parameter(torch.randn(d_state, d_state))  # Inverse transformation
+
+    def dual_forward(self, x):
+        """Forward pass using state space duality"""
+        batch, seq_len, d_model = x.shape
+
+        # Perspective 1: Standard state space
+        h1 = self._perspective1_forward(x)
+
+        # Perspective 2: Dual state space
+        h2 = self._perspective2_forward(x)
+
+        # Combine perspectives
+        h_combined = self._combine_perspectives(h1, h2)
+
+        return h_combined
+
+    def _perspective1_forward(self, x):
+        """Standard state space perspective"""
+        # Traditional SSM computation
+        h = torch.zeros(batch, self.d_state, device=x.device)
+        outputs = []
+
+        for t in range(seq_len):
+            h = self.A @ h + self.B.T @ x[:, t]
+            y = self.C @ h + self.D * x[:, t]
+            outputs.append(y)
+
+        return torch.stack(outputs, dim=1)
+
+    def _perspective2_forward(self, x):
+        """Dual state space perspective"""
+        # Transformed state space computation
+        h_transformed = torch.zeros(batch, self.d_state, device=x.device)
+        outputs = []
+
+        for t in range(seq_len):
+            h_transformed = self.P @ self.A @ self.Q @ h_transformed + self.P @ self.B.T @ x[:, t]
+            y = self.C @ self.Q @ h_transformed + self.D * x[:, t]
+            outputs.append(y)
+
+        return torch.stack(outputs, dim=1)
+```
+
+#### 2. Hardware-Aware Kernel Optimization
+
+Mamba-2 introduces highly optimized kernels specifically designed for modern AI accelerators.
+
+```python
+
+class HardwareAwareSSM:
+    def __init__(self, d_model, d_state, device='cuda'):
+        self.d_model = d_model
+        self.d_state = d_state
+        self.device = device
+
+        # Hardware-specific optimizations
+        if device == 'cuda':
+            self.scan_kernel = self._init_cuda_kernel()
+        elif device == 'xpu':
+            self.scan_kernel = self._init_xpu_kernel()
+        else:
+            self.scan_kernel = self._init_cpu_kernel()
+
+    def selective_scan_2(self, u, delta, A, B, C, D):
+        """Mamba-2 selective scan with hardware optimization"""
+        batch, seq_len, d_model = u.shape
+
+        # Input-dependent parameter generation
+        delta = F.softplus(delta)  # Ensure positive
+
+        # Hardware-optimized computation
+        if self.device == 'cuda':
+            # CUDA kernel implementation
+            y = self._cuda_selective_scan(u, delta, A, B, C, D)
+        else:
+            # Fallback implementation
+            y = self._fallback_selective_scan(u, delta, A, B, C, D)
+
+        return y
+
+    def _cuda_selective_scan(self, u, delta, A, B, C, D):
+        """CUDA-optimized selective scan implementation"""
+        # This would be implemented in CUDA/Triton
+        # Key optimizations:
+        # 1. Kernel fusion
+        # 2. Memory coalescing
+        # 3. Shared memory utilization
+        # 4. Tensor core optimization
+
+        # Simplified pseudo-implementation
+        return torch.ops.mamba2.selective_scan(u, delta, A, B, C, D)
+```
+
+#### 3. Enhanced Selective State Spaces
+
+```python
+
+class EnhancedSelectiveSSM:
+    def __init__(self, d_model, d_state, d_conv=4, expansion=2):
+        super().__init__()
+
+        self.d_model = d_model
+        self.d_state = d_state
+        self.d_conv = d_conv
+        self.expansion = expansion
+        self.d_inner = d_model * expansion
+
+        # Enhanced selection mechanism
+        self.in_proj = nn.Linear(d_model, self.d_inner * 2)
+
+        # State space parameters with enhanced initialization
+        self.A_log = nn.Parameter(torch.log(torch.arange(1, d_state + 1).float()))
+        self.D = nn.Parameter(torch.ones(d_model))
+
+        # Input-dependent projection
+        self.x_proj = nn.Linear(self.d_inner, d_state * 2 + d_model)
+
+        # Convolution for local context (enhanced)
+        self.conv1d = nn.Conv1d(
+            self.d_inner, self.d_inner, d_conv,
+            groups=self.d_inner, padding=d_conv-1
+        )
+
+        # Output projection
+        self.out_proj = nn.Linear(self.d_inner, d_model)
+
+        # Normalization
+        self.norm = nn.RMSNorm(d_model)
+
+    def forward(self, x):
+        """Enhanced Mamba-2 forward pass"""
+        batch, seq_len, d_model = x.shape
+
+        # Input projection
+        x_proj = self.in_proj(x)
+        x, gate = x_proj.chunk(2, dim=-1)
+
+        # Convolution for local context
+        x = self.conv1d(x.transpose(-1, -2)).transpose(-1, -2)
+        x = F.silu(x)
+
+        # Generate input-dependent parameters
+        x_dbl = self.x_proj(x)
+        delta, B, C = torch.split(x_dbl, [self.d_inner, self.d_state, self.d_state], dim=-1)
+
+        # Apply selective scan
+        y = self.selective_scan(x, delta, B, C)
+
+        # Apply gating
+        y = y * F.silu(gate)
+
+        # Output projection
+        y = self.out_proj(y)
+
+        return y
+
+    def selective_scan(self, u, delta, B, C):
+        """Enhanced selective scan with Mamba-2 optimizations"""
+        batch, seq_len, d_inner = u.shape
+
+        # Discretize continuous parameters
+        A = -torch.exp(self.A_log.float())
+        delta = F.softplus(delta)
+
+        # Hardware-optimized computation
+        if hasattr(torch.ops, 'mamba2'):
+            # Use optimized Mamba-2 kernel
+            y = torch.ops.mamba2.selective_scan(
+                u, delta, A, B, C, self.D
+            )
+        else:
+            # Fallback to original implementation
+            y = self._selective_scan_fallback(u, delta, A, B, C)
+
+        return y
+```
+
+### Performance Improvements
+
+Mamba-2 achieves significant performance improvements over Mamba-1:
+
+```python
+
+class Mamba2Benchmark:
+    def benchmark_performance(self):
+        """Benchmark Mamba-2 vs Mamba-1 performance"""
+
+        configs = [
+            {'seq_len': 1024, 'd_model': 768, 'batch_size': 8},
+            {'seq_len': 4096, 'd_model': 768, 'batch_size': 4},
+            {'seq_len': 16384, 'd_model': 768, 'batch_size': 2},
+            {'seq_len': 65536, 'd_model': 768, 'batch_size': 1},
+        ]
+
+        results = []
+
+        for config in configs:
+            # Benchmark Mamba-1
+            mamba1_time = self._benchmark_mamba1(config)
+
+            # Benchmark Mamba-2
+            mamba2_time = self._benchmark_mamba2(config)
+
+            # Calculate speedup
+            speedup = mamba1_time / mamba2_time
+
+            results.append({
+                'config': config,
+                'mamba1_time': mamba1_time,
+                'mamba2_time': mamba2_time,
+                'speedup': speedup
+            })
+
+        return results
+
+    def visualize_results(self, results):
+        """Visualize benchmarking results"""
+        import matplotlib.pyplot as plt
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+
+        # Performance comparison
+        seq_lens = [r['config']['seq_len'] for r in results]
+        mamba1_times = [r['mamba1_time'] for r in results]
+        mamba2_times = [r['mamba2_time'] for r in results]
+
+        ax1.loglog(seq_lens, mamba1_times, 'o-', label='Mamba-1')
+        ax1.loglog(seq_lens, mamba2_times, 'o-', label='Mamba-2')
+        ax1.set_xlabel('Sequence Length')
+        ax1.set_ylabel('Inference Time (s)')
+        ax1.set_title('Mamba-1 vs Mamba-2 Performance')
+        ax1.legend()
+        ax1.grid(True)
+
+        # Speedup analysis
+        speedups = [r['speedup'] for r in results]
+        ax2.bar(range(len(speedups)), speedups)
+        ax2.set_xlabel('Sequence Length Configuration')
+        ax2.set_ylabel('Speedup (x)')
+        ax2.set_title('Mamba-2 Speedup over Mamba-1')
+        ax2.set_xticks(range(len(speedups)))
+        ax2.set_xticklabels([f'{seq_len}' for seq_len in seq_lens], rotation=45)
+
+        plt.tight_layout()
+        plt.savefig('mamba2_benchmark.png', dpi=300)
+        plt.show()
+```
+
+---
+
+## Hydra and Mixture of Experts SSMs
+
+### Introduction to Hydra
+
+Hydra represents the next evolution in SSM architectures, incorporating Mixture of Experts (MoE) principles with state space models for unprecedented scalability and performance.
+
+### Hydra Architecture
+
+```python
+
+class HydraSSM:
+    def __init__(self, d_model, num_experts=8, expert_capacity=4):
+        super().__init__()
+
+        self.d_model = d_model
+        self.num_experts = num_experts
+        self.expert_capacity = expert_capacity
+
+        # Router for expert selection
+        self.router = nn.Linear(d_model, num_experts)
+
+        # Expert networks (Mamba-2 based)
+        self.experts = nn.ModuleList([
+            Mamba2Expert(d_model) for _ in range(num_experts)
+        ])
+
+        # Output projection
+        self.output_proj = nn.Linear(d_model, d_model)
+
+        # Expert capacity tracking
+        self.expert_usage = torch.zeros(num_experts)
+
+    def forward(self, x):
+        """Hydra forward pass with MoE routing"""
+        batch, seq_len, d_model = x.shape
+
+        # Router decisions
+        router_logits = self.router(x)
+        router_probs = F.softmax(router_logits, dim=-1)
+
+        # Top-k expert selection
+        top_k_probs, top_k_indices = torch.topk(router_probs, k=2, dim=-1)
+
+        # Normalize expert selection probabilities
+        top_k_probs = top_k_probs / top_k_probs.sum(dim=-1, keepdim=True)
+
+        # Process through selected experts
+        expert_outputs = []
+        expert_weights = []
+
+        for i in range(self.num_experts):
+            # Find tokens routed to this expert
+            expert_mask = (top_k_indices == i).any(dim=-1)
+
+            if expert_mask.any():
+                # Extract tokens for this expert
+                expert_tokens = x[expert_mask]
+
+                # Get weights for this expert
+                expert_weight = top_k_probs[expert_mask]
+                expert_weight = expert_weight[:, top_k_indices[expert_mask] == i]
+
+                # Process through expert
+                expert_output = self.experts[i](expert_tokens)
+
+                expert_outputs.append((expert_mask, expert_output))
+                expert_weights.append((expert_mask, expert_weight))
+
+                # Update usage tracking
+                self.expert_usage[i] += expert_mask.sum()
+
+        # Combine expert outputs
+        output = torch.zeros_like(x)
+
+        for (mask, expert_out), (_, weights) in zip(expert_outputs, expert_weights):
+            output[mask] = output[mask] + expert_out * weights
+
+        # Final projection
+        output = self.output_proj(output)
+
+        return output
+
+    def get_expert_statistics(self):
+        """Get expert usage statistics"""
+        total_usage = self.expert_usage.sum()
+
+        return {
+            'expert_usage': self.expert_usage.tolist(),
+            'expert_distribution': (self.expert_usage / total_usage).tolist(),
+            'load_balance': self._calculate_load_balance(),
+            'expert_efficiency': self._calculate_expert_efficiency()
+        }
+
+    def _calculate_load_balance(self):
+        """Calculate load balance across experts"""
+        usage_normalized = self.expert_usage / self.expert_usage.sum()
+        # Lower entropy indicates better load balancing
+        entropy = -torch.sum(usage_normalized * torch.log(usage_normalized + 1e-8))
+        return entropy.item()
+
+    def _calculate_expert_efficiency(self):
+        """Calculate expert efficiency metrics"""
+        avg_usage = self.expert_usage.mean()
+        std_usage = self.expert_usage.std()
+
+        return {
+            'average_usage': avg_usage.item(),
+            'usage_std': std_usage.item(),
+            'efficiency_score': (avg_usage / (std_usage + 1e-8)).item()
+        }
+
+class Mamba2Expert(nn.Module):
+    def __init__(self, d_model):
+        super().__init__()
+
+        # Mamba-2 based expert
+        self.mamba_block = Mamba2Block(d_model)
+
+        # Expert-specific adaptations
+        self.expert_adapter = nn.Sequential(
+            nn.Linear(d_model, d_model // 4),
+            nn.GELU(),
+            nn.Linear(d_model // 4, d_model)
+        )
+
+    def forward(self, x):
+        """Expert forward pass"""
+        # Mamba-2 processing
+        mamba_output = self.mamba_block(x)
+
+        # Expert-specific adaptation
+        expert_output = self.expert_adapter(mamba_output)
+
+        return expert_output
 ```
 
 ---

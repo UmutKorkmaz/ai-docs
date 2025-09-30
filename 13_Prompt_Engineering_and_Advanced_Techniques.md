@@ -1,18 +1,32 @@
-# Advanced Prompt Engineering and Chain-of-Thought Reasoning
+# Advanced Prompt Engineering and Chain-of-Thought Reasoning (2024-2025 Edition)
 
 ## Introduction
 
-Prompt engineering has emerged as one of the most critical skills in working with large language models (LLMs). This comprehensive guide covers advanced techniques for designing, optimizing, and implementing effective prompts to maximize the performance of AI systems.
+Prompt engineering has evolved dramatically in 2024-2025, becoming one of the most critical skills for working with advanced AI systems including GPT-4, Claude 3, Gemini, and open-source models. This comprehensive guide covers cutting-edge techniques, emerging paradigms, and production-ready implementations that define the state of the art in prompt engineering.
+
+### Major Advances in 2024-2025
+
+- **Multi-modal Prompting**: Integration of text, images, audio, and video in single prompts
+- **Agentic Workflows**: Complex multi-step reasoning and tool use
+- **Constitutional AI**: Advanced safety and alignment techniques
+- **Chain-of-Density**: Ultra-compact summarization and reasoning
+- **Graph-of-Thoughts**: Structured reasoning with knowledge graphs
+- **Meta-Prompting**: Self-improving prompt generation
+- **Adaptive Prompting**: Dynamic context-aware prompt optimization
 
 ## Table of Contents
 
 1. [Fundamentals of Prompt Engineering](#fundamentals-of-prompt-engineering)
 2. [Chain-of-Thought Reasoning](#chain-of-thought-reasoning)
-3. [Advanced Prompting Techniques](#advanced-prompting-techniques)
-4. [Prompt Optimization Strategies](#prompt-optimization-strategies)
-5. [Domain-Specific Applications](#domain-specific-applications)
-6. [Tools and Frameworks](#tools-and-frameworks)
-7. [Best Practices and Guidelines](#best-practices-and-guidelines)
+3. [Advanced Prompting Techniques (2024-2025)](#advanced-prompting-techniques)
+4. [Multi-modal and Agentic Prompting](#multi-modal-and-agentic-prompting)
+5. [Prompt Optimization Strategies](#prompt-optimization-strategies)
+6. [Domain-Specific Applications](#domain-specific-applications)
+7. [Production-Ready Systems](#production-ready-systems)
+8. [Safety and Alignment](#safety-and-alignment)
+9. [Tools and Frameworks](#tools-and-frameworks)
+10. [Best Practices and Guidelines](#best-practices-and-guidelines)
+11. [Future Research Directions](#future-research-directions)
 
 ---
 
@@ -206,9 +220,627 @@ print(f"Final revenue: ${result:,.2f}")
 
 ---
 
+## Advanced Prompting Techniques (2024-2025)
+
+### 1. Constitutional AI and Advanced Safety
+
+Constitutional AI represents a major breakthrough in aligning AI systems with human values through explicit principles and oversight mechanisms.
+
+#### Constitutional Principles Framework
+```python
+
+class Constitution:
+    def __init__(self):
+        self.principles = [
+            "Choose the response that is most helpful, honest, and harmless",
+            "Respect human autonomy and dignity",
+            "Promote beneficial outcomes for humanity",
+            "Avoid deception, manipulation, or harmful content",
+            "Protect privacy and confidentiality",
+            "Be transparent about limitations and uncertainties",
+            "Promote fairness and reduce bias",
+            "Consider diverse perspectives and cultural contexts"
+        ]
+
+    def evaluate_response(self, response: str, context: str) -> dict:
+        """Evaluate response against constitutional principles"""
+        violations = []
+        scores = {}
+
+        for principle in self.principles:
+            score = self._evaluate_principle_compliance(response, principle)
+            scores[principle] = score
+
+            if score < 0.7:  # Below threshold
+                violations.append({
+                    'principle': principle,
+                    'score': score,
+                    'concern': self._generate_concern(response, principle)
+                })
+
+        return {
+            'compliant': len(violations) == 0,
+            'scores': scores,
+            'violations': violations,
+            'overall_score': sum(scores.values()) / len(scores)
+        }
+```
+
+#### AI Oversight and Red Teaming
+```python
+
+class AIOversight:
+    def __init__(self, constitution: Constitution):
+        self.constitution = constitution
+        self.red_team_models = []
+        self.audit_log = []
+
+    def red_team_test(self, prompt: str, model) -> dict:
+        """Test model with adversarial prompts"""
+        adversarial_prompts = self._generate_adversarial_prompts(prompt)
+
+        test_results = []
+        for adv_prompt in adversarial_prompts:
+            response = model.generate(adv_prompt)
+            evaluation = self.constitution.evaluate_response(response, adv_prompt)
+            test_results.append({
+                'prompt': adv_prompt,
+                'response': response,
+                'evaluation': evaluation
+            })
+
+        return self._analyze_vulnerabilities(test_results)
+
+    def supervise_interaction(self, prompt: str, response: str) -> dict:
+        """Real-time supervision of AI interactions"""
+        evaluation = self.constitution.evaluate_response(response, prompt)
+
+        if not evaluation['compliant']:
+            # Generate safer alternative
+            safer_response = self._generate_safer_alternative(prompt, response)
+            return {
+                'original_response': response,
+                'safer_response': safer_response,
+                'concerns': evaluation['violations'],
+                'supervision_action': 'replaced'
+            }
+
+        return {
+            'response': response,
+            'evaluation': evaluation,
+            'supervision_action': 'approved'
+        }
+```
+
+### 2. Chain-of-Density (CoD)
+
+Chain-of-Density represents a breakthrough in ultra-compact summarization and reasoning, enabling models to achieve human-level compression while preserving critical information.
+
+#### CoD Architecture
+```python
+
+class ChainOfDensity:
+    def __init__(self, model, density_target=0.8):
+        self.model = model
+        self.density_target = density_target
+
+    def generate_dense_summary(self, text: str, max_tokens: int) -> str:
+        """Generate ultra-dense summary using Chain-of-Density"""
+
+        # Step 1: Initial extraction
+        entities = self._extract_key_entities(text)
+        relationships = self._extract_relationships(text)
+
+        # Step 2: Density-based compression
+        compressed_facts = self._compress_facts(entities, relationships)
+
+        # Step 3: Iterative refinement
+        summary = self._iterative_refinement(compressed_facts, max_tokens)
+
+        return summary
+
+    def _extract_key_entities(self, text: str) -> list:
+        """Extract key entities using entity density metrics"""
+        prompt = f"""Extract the most information-dense entities from this text:
+
+        Text: {text}
+
+        Return entities in order of information density (highest first),
+        where density = (unique information provided) / (tokens used)
+        """
+
+        response = self.model.generate(prompt)
+        return self._parse_entities(response)
+
+    def _compress_facts(self, entities: list, relationships: list) -> str:
+        """Compress facts using density optimization"""
+        compression_prompt = f"""Compress these facts to maximum density:
+
+        Entities: {entities}
+        Relationships: {relationships}
+
+        Rules:
+        1. Remove redundant information
+        2. Use abbreviations where possible
+        3. Employ semantic compression
+        4. Preserve critical relationships
+        5. Maintain factual accuracy
+
+        Target density: {self.density_target}
+        """
+
+        return self.model.generate(compression_prompt)
+```
+
+#### Information Density Metrics
+```python
+
+class InformationDensity:
+    def calculate_density(self, text: str) -> float:
+        """Calculate information density of text"""
+        unique_entities = len(set(self._extract_entities(text)))
+        unique_relationships = len(set(self._extract_relationships(text)))
+        total_tokens = len(text.split())
+
+        # Density = (information units) / (tokens used)
+        density = (unique_entities + unique_relationships) / total_tokens
+        return density
+
+    def optimize_density(self, text: str, target_density: float) -> str:
+        """Optimize text to achieve target information density"""
+        current_density = self.calculate_density(text)
+
+        if current_density < target_density:
+            # Increase density through compression
+            return self._compress_text(text, target_density)
+        else:
+            # Decrease density through expansion
+            return self._expand_text(text, target_density)
+```
+
+### 3. Graph-of-Thoughts (GoT)
+
+Graph-of-Thoughts extends Chain-of-Thought by representing reasoning as a graph structure, enabling more complex reasoning patterns and knowledge integration.
+
+#### GoT Architecture
+```python
+
+class GraphOfThoughts:
+    def __init__(self, model):
+        self.model = model
+        self.knowledge_graph = KnowledgeGraph()
+
+    def reason_with_graph(self, question: str, context: str = "") -> dict:
+        """Perform reasoning using graph structure"""
+
+        # Step 1: Build initial knowledge graph
+        graph = self._build_knowledge_graph(question, context)
+
+        # Step 2: Identify reasoning paths
+        reasoning_paths = self._identify_reasoning_paths(graph, question)
+
+        # Step 3: Evaluate and select best path
+        best_path = self._evaluate_paths(reasoning_paths)
+
+        # Step 4: Execute reasoning along selected path
+        result = self._execute_reasoning_path(best_path)
+
+        return result
+
+    def _build_knowledge_graph(self, question: str, context: str) -> dict:
+        """Build knowledge graph from question and context"""
+
+        # Extract entities and relationships
+        entities = self._extract_entities(question + context)
+        relationships = self._extract_relationships(question + context)
+
+        # Create graph structure
+        graph = {
+            'nodes': entities,
+            'edges': relationships,
+            'metadata': {
+                'question': question,
+                'context': context,
+                'timestamp': datetime.now()
+            }
+        }
+
+        return graph
+
+    def _identify_reasoning_paths(self, graph: dict, question: str) -> list:
+        """Identify possible reasoning paths through the graph"""
+
+        path_prompt = f"""Given this knowledge graph and question, identify all possible reasoning paths:
+
+        Graph: {graph}
+        Question: {question}
+
+        For each path, provide:
+        1. Sequence of nodes to visit
+        2. Reasoning step at each node
+        3. Confidence in path validity
+        4. Estimated information gain
+        """
+
+        response = self.model.generate(path_prompt)
+        return self._parse_reasoning_paths(response)
+```
+
+### 4. Meta-Prompting
+
+Meta-prompting enables models to generate and improve their own prompts, creating self-optimizing systems.
+
+#### Meta-Prompting Framework
+```python
+
+class MetaPrompter:
+    def __init__(self, model):
+        self.model = model
+        self.prompt_history = []
+        self.performance_metrics = []
+
+    def generate_optimized_prompt(self, task: str, requirements: dict) -> str:
+        """Generate optimized prompt for given task"""
+
+        # Step 1: Analyze task requirements
+        task_analysis = self._analyze_task(task, requirements)
+
+        # Step 2: Generate initial prompt candidates
+        prompt_candidates = self._generate_prompt_candidates(task_analysis)
+
+        # Step 3: Evaluate and select best prompt
+        best_prompt = self._evaluate_prompts(prompt_candidates, task)
+
+        # Step 4: Iterate and refine
+        optimized_prompt = self._refine_prompt(best_prompt, task)
+
+        return optimized_prompt
+
+    def _analyze_task(self, task: str, requirements: dict) -> dict:
+        """Analyze task to understand requirements"""
+
+        analysis_prompt = f"""Analyze this task and extract key requirements:
+
+        Task: {task}
+        Requirements: {requirements}
+
+        Provide analysis covering:
+        1. Task type and complexity
+        2. Required capabilities
+        3. Output format needs
+        4. Potential challenges
+        5. Success criteria
+        """
+
+        response = self.model.generate(analysis_prompt)
+        return self._parse_analysis(response)
+
+    def _generate_prompt_candidates(self, task_analysis: dict) -> list:
+        """Generate multiple prompt candidates"""
+
+        generation_prompt = f"""Generate 5 different prompts for this task:
+
+        Task Analysis: {task_analysis}
+
+        Requirements:
+        1. Each prompt should use different strategies
+        2. Include various prompting techniques
+        3. Address different aspects of the task
+        4. Consider different user expertise levels
+
+        Return prompts with explanations of their approach.
+        """
+
+        response = self.model.generate(generation_prompt)
+        return self._parse_prompt_candidates(response)
+
+    def self_improve(self, performance_data: list):
+        """Improve meta-prompting based on performance data"""
+
+        improvement_prompt = f"""Based on this performance data, improve the meta-prompting strategy:
+
+        Performance Data: {performance_data}
+
+        Current Strategy: {self._current_strategy}
+
+        Suggest improvements for:
+        1. Task analysis methods
+        2. Prompt generation strategies
+        3. Evaluation criteria
+        4. Refinement techniques
+        """
+
+        improved_strategy = self.model.generate(improvement_prompt)
+        self._update_strategy(improved_strategy)
+```
+
+### 5. Adaptive Prompting
+
+Adaptive prompting systems dynamically adjust prompts based on real-time feedback and context.
+
+#### Adaptive Prompting System
+```python
+
+class AdaptivePrompter:
+    def __init__(self, model):
+        self.model = model
+        self.context_history = []
+        self.performance_tracker = PerformanceTracker()
+
+    def generate_adaptive_prompt(self, user_input: str, context: dict) -> str:
+        """Generate context-aware adaptive prompt"""
+
+        # Analyze current context
+        context_analysis = self._analyze_context(context)
+
+        # Retrieve relevant history
+        relevant_history = self._retrieve_relevant_history(user_input)
+
+        # Generate base prompt
+        base_prompt = self._generate_base_prompt(user_input, context_analysis)
+
+        # Adapt based on context and history
+        adapted_prompt = self._adapt_prompt(base_prompt, context_analysis, relevant_history)
+
+        return adapted_prompt
+
+    def _analyze_context(self, context: dict) -> dict:
+        """Analyze current interaction context"""
+
+        analysis = {
+            'user_expertise': self._assess_user_expertise(context),
+            'task_complexity': self._assess_task_complexity(context),
+            'time_constraints': self._assess_time_constraints(context),
+            'available_resources': self._assess_available_resources(context),
+            'interaction_history': self._summarize_interaction_history(context)
+        }
+
+        return analysis
+
+    def _adapt_prompt(self, base_prompt: str, context: dict, history: list) -> str:
+        """Adapt prompt based on context and history"""
+
+        adaptation_prompt = f"""Adapt this prompt based on the context and history:
+
+        Base Prompt: {base_prompt}
+        Context Analysis: {context}
+        Relevant History: {history}
+
+        Adaptation Rules:
+        1. Adjust complexity based on user expertise
+        2. Modify examples based on history
+        3. Add/remove constraints based on context
+        4. Optimize for current task complexity
+        5. Incorporate successful patterns from history
+
+        Return the adapted prompt.
+        """
+
+        return self.model.generate(adaptation_prompt)
+
+---
+
+## Multi-modal and Agentic Prompting
+
+### 1. Multi-modal Prompting
+
+Multi-modal prompting integrates text, images, audio, and video in sophisticated reasoning workflows.
+
+#### Multi-modal Prompt Architecture
+```python
+
+class MultiModalPrompter:
+    def __init__(self, model):
+        self.model = model
+        self.modalities = ['text', 'image', 'audio', 'video']
+        self.fusion_strategy = 'attention_based'
+
+    def create_multi_modal_prompt(self, inputs: dict, task: str) -> str:
+        """Create prompt that integrates multiple modalities"""
+
+        # Process each modality
+        processed_inputs = {}
+        for modality, content in inputs.items():
+            processed_inputs[modality] = self._process_modality(modality, content)
+
+        # Create cross-modal references
+        cross_modal_references = self._create_cross_modal_references(processed_inputs)
+
+        # Generate integrated prompt
+        prompt = self._generate_integrated_prompt(processed_inputs, cross_modal_references, task)
+
+        return prompt
+
+    def _process_modality(self, modality: str, content) -> dict:
+        """Process individual modality content"""
+
+        if modality == 'text':
+            return self._process_text(content)
+        elif modality == 'image':
+            return self._process_image(content)
+        elif modality == 'audio':
+            return self._process_audio(content)
+        elif modality == 'video':
+            return self._process_video(content)
+
+    def _create_cross_modal_references(self, processed_inputs: dict) -> list:
+        """Create references between different modalities"""
+
+        reference_prompt = f"""Create cross-modal references between these modalities:
+
+        Processed Inputs: {processed_inputs}
+
+        For each pair of modalities, identify:
+        1. Complementary information
+        2. Contradictory information
+        3. Contextual relationships
+        4. Temporal/spatial connections
+        """
+
+        response = self.model.generate(reference_prompt)
+        return self._parse_references(response)
+```
+
+### 2. Agentic Workflows
+
+Agentic workflows enable complex multi-step reasoning with tool use and planning capabilities.
+
+#### Agent Architecture
+```python
+
+class AgenticPrompter:
+    def __init__(self, model, tools: list):
+        self.model = model
+        self.tools = tools
+        self.planning_engine = PlanningEngine()
+        self.memory_system = MemorySystem()
+
+    def execute_agentic_workflow(self, goal: str, constraints: list = None) -> dict:
+        """Execute complex goal using agentic workflow"""
+
+        # Step 1: Goal decomposition
+        subgoals = self._decompose_goal(goal)
+
+        # Step 2: Plan creation
+        plan = self._create_execution_plan(subgoals, constraints)
+
+        # Step 3: Execute plan
+        execution_results = self._execute_plan(plan)
+
+        # Step 4: Synthesize results
+        final_result = self._synthesize_results(execution_results)
+
+        return final_result
+
+    def _decompose_goal(self, goal: str) -> list:
+        """Decompose complex goal into manageable subgoals"""
+
+        decomposition_prompt = f"""Decompose this goal into subgoals:
+
+        Goal: {goal}
+
+        Requirements:
+        1. Each subgoal should be independently achievable
+        2. Maintain logical dependencies between subgoals
+        3. Estimate completion time for each subgoal
+        4. Identify required tools for each subgoal
+        5. Specify success criteria for each subgoal
+        """
+
+        response = self.model.generate(decomposition_prompt)
+        return self._parse_subgoals(response)
+
+    def _create_execution_plan(self, subgoals: list, constraints: list) -> dict:
+        """Create execution plan for subgoals"""
+
+        planning_prompt = f"""Create an execution plan for these subgoals:
+
+        Subgoals: {subgoals}
+        Constraints: {constraints}
+
+        Available Tools: {[tool.name for tool in self.tools]}
+
+        Plan should include:
+        1. Sequential ordering of subgoals
+        2. Parallel execution opportunities
+        3. Tool selection and usage
+        4. Error handling and recovery
+        5. Progress monitoring points
+        """
+
+        response = self.model.generate(planning_prompt)
+        return self._parse_execution_plan(response)
+```
+
+---
+
 ## Advanced Prompting Techniques
 
-### 1. ReAct (Reasoning and Acting)
+### 1. ReAct (Reasoning and Acting) - Enhanced 2024
+
+ReAct has evolved to include more sophisticated tool integration and planning capabilities.
+
+#### Enhanced ReAct Framework
+```python
+
+class EnhancedReAct:
+    def __init__(self, model, tools: list):
+        self.model = model
+        self.tools = {tool.name: tool for tool in tools}
+        self.planning_cache = {}
+        self.execution_history = []
+
+    def solve_complex_problem(self, problem: str) -> dict:
+        """Solve complex problem using enhanced ReAct"""
+
+        conversation = []
+        state = {
+            'problem': problem,
+            'current_step': 0,
+            'tools_used': [],
+            'intermediate_results': {},
+            'final_answer': None
+        }
+
+        while not state['final_answer']:
+            # Generate thought and action
+            thought, action = self._generate_thought_action(state, conversation)
+
+            # Execute action
+            if action['type'] == 'tool_use':
+                result = self._execute_tool(action['tool_name'], action['parameters'])
+            elif action['type'] == 'final_answer':
+                result = action['answer']
+                state['final_answer'] = result
+
+            # Update state and conversation
+            state['current_step'] += 1
+            conversation.append({
+                'thought': thought,
+                'action': action,
+                'result': result
+            })
+
+            # Update intermediate results
+            if action['type'] == 'tool_use':
+                state['intermediate_results'][action['tool_name']] = result
+                state['tools_used'].append(action['tool_name'])
+
+        return {
+            'answer': state['final_answer'],
+            'conversation': conversation,
+            'steps_taken': state['current_step'],
+            'tools_used': state['tools_used']
+        }
+
+    def _generate_thought_action(self, state: dict, conversation: list) -> tuple:
+        """Generate next thought and action pair"""
+
+        prompt = f"""You are solving this problem step by step:
+
+        Problem: {state['problem']}
+        Current Step: {state['current_step']}
+        Tools Available: {list(self.tools.keys())}
+        Tools Used: {state['tools_used']}
+
+        Previous Conversation:
+        {self._format_conversation(conversation)}
+
+        Available Tools:
+        {self._format_tools()}
+
+        Respond with:
+        1. Thought: Your reasoning about what to do next
+        2. Action: Either use a tool or provide final answer
+
+        Action format:
+        - Tool use: {{"type": "tool_use", "tool_name": "tool_name", "parameters": {{...}}}}
+        - Final answer: {{"type": "final_answer", "answer": "your final answer"}}
+        """
+
+        response = self.model.generate(prompt)
+        return self._parse_thought_action(response)
+```
 
 ReAct combines reasoning with action-taking capabilities.
 

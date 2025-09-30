@@ -1,0 +1,180 @@
+{
+  "version": "1.0",
+  "documentation_root": "/Users/dtumkorkmaz/Projects/ai-docs",
+  "output_directory": "cross_reference_output",
+
+  "extraction": {
+    "min_content_length": 100,
+    "max_concepts_per_file": 10,
+    "supported_extensions": [".md", ".py", ".ipynb"],
+    "excluded_directories": [
+      ".git",
+      "node_modules",
+      "venv",
+      "__pycache__",
+      "cross_reference_output"
+    ],
+    "heading_patterns": [
+      "^#{1,6}\\s+(.+)$",
+      "##\\s+(.+)$",
+      "###\\s+(.+)$"
+    ]
+  },
+
+  "similarity": {
+    "semantic_threshold": 0.3,
+    "code_pattern_threshold": 0.5,
+    "min_relationship_strength": 0.2,
+    "max_links_per_concept": 10,
+    "similarity_method": "jaccard"  // Options: "jaccard", "cosine", "embedding"
+  },
+
+  "relationships": {
+    "types": {
+      "PREREQUISITE_OF": {
+        "description": "Required knowledge before studying this concept",
+        "color": "#10b981",
+        "line_style": "dashed"
+      },
+      "APPLICATION_OF": {
+        "description": "Practical application of this concept",
+        "color": "#3b82f6",
+        "line_style": "solid"
+      },
+      "EXTENDS": {
+        "description": "Builds upon or enhances this concept",
+        "color": "#8b5cf6",
+        "line_style": "dotted"
+      },
+      "SIMILAR_TO": {
+        "description": "Similar approach or solves similar problem",
+        "color": "#f59e0b",
+        "line_style": "solid"
+      },
+      "IMPLEMENTS": {
+        "description": "Code implementation of this concept",
+        "color": "#ec4899",
+        "line_style": "solid"
+      },
+      "RELATED_TO": {
+        "description": "General relationship between concepts",
+        "color": "#6b7280",
+        "line_style": "solid"
+      }
+    },
+
+    "indicators": {
+      "prerequisites": [
+        "requires knowledge of",
+        "assumes familiarity with",
+        "builds on",
+        "prerequisite",
+        "before reading",
+        "you should know"
+      ],
+      "applications": [
+        "application",
+        "use case",
+        "applied to",
+        "used in",
+        "practical example",
+        "real-world",
+        "implementation"
+      ],
+      "extensions": [
+        "extends",
+        "builds upon",
+        "enhanced version",
+        "improvement on",
+        "advanced version"
+      ]
+    }
+  },
+
+  "learning_paths": {
+    "beginner": {
+      "name": "Beginner Path",
+      "description": "Introduction to AI and Machine Learning",
+      "max_concepts": 20,
+      "difficulty_filter": ["beginner", "intermediate"]
+    },
+    "nlp_specialist": {
+      "name": "NLP Specialist Path",
+      "description": "Deep dive into Natural Language Processing",
+      "sections": ["03_Natural_Language_Processing"]
+    },
+    "cv_specialist": {
+      "name": "Computer Vision Specialist Path",
+      "description": "Focus on Computer Vision and Image Processing",
+      "sections": ["04_Computer_Vision"]
+    },
+    "ai_researcher": {
+      "name": "AI Researcher Path",
+      "description": "Advanced theoretical exploration",
+      "difficulty_filter": ["advanced", "expert"]
+    },
+    "practitioner": {
+      "name": "AI Practitioner Path",
+      "description": "Implementation and application focused",
+      "category_filter": ["implementation", "application"]
+    }
+  },
+
+  "visualization": {
+    "node_colors": {
+      "beginner": "#10b981",
+      "intermediate": "#3b82f6",
+      "advanced": "#8b5cf6",
+      "expert": "#ef4444"
+    },
+    "node_sizes": {
+      "min": 5,
+      "max": 20,
+      "scale_factor": 2
+    },
+    "force_settings": {
+      "link_distance": 100,
+      "charge_strength": -300,
+      "center_force": 0.1,
+      "link_width_factor": 2
+    }
+  },
+
+  "integration": {
+    "add_cross_reference_section": true,
+    "section_title": "Cross-References",
+    "max_links_per_section": 5,
+    "include_learning_paths": true,
+    "create_index_file": true,
+    "index_filename": "CROSS_REFERENCE_INDEX.md",
+    "link_format": "markdown",
+    "anchor_pattern": "{{concept_id}}"
+  },
+
+  "semantic_analysis": {
+    "stop_words": [
+      "the", "is", "at", "which", "on", "and", "a", "an", "as", "are", "was",
+      "were", "been", "be", "have", "has", "had", "do", "does", "did",
+      "will", "would", "should", "could", "can", "may", "might", "must"
+    ],
+    "stemming": true,
+    "ngram_range": [1, 2],
+    "min_df": 2,
+    "max_df": 0.8
+  },
+
+  "performance": {
+    "batch_size": 50,
+    "parallel_processing": true,
+    "cache_enabled": true,
+    "cache_directory": ".cache",
+    "max_memory_usage": "2GB"
+  },
+
+  "logging": {
+    "level": "INFO",
+    "file": "cross_reference.log",
+    "console": true,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}
