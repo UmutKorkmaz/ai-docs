@@ -1,0 +1,221 @@
+{
+  "version": "1.0.0",
+  "title": "AI Documentation Navigation System",
+  "description": "Comprehensive navigation and organization system for AI documentation",
+  "base_path": "/Users/dtumkorkmaz/Projects/ai-docs",
+  "generated_at": "2025-01-02T00:00:00Z",
+
+  "ui_settings": {
+    "default_theme": "auto",
+    "default_font_size": 16,
+    "sidebar_width": 320,
+    "search_debounce_delay": 300,
+    "max_recent_sections": 10,
+    "auto_save_progress": true
+  },
+
+  "navigation_features": {
+    "breadcrumbs": {
+      "enabled": true,
+      "show_home": true,
+      "separator": "›",
+      "max_levels": 5
+    },
+    "quick_jump": {
+      "enabled": true,
+      "shortcut": "Ctrl+K",
+      "categories": true,
+      "difficulty_levels": true,
+      "popular_sections": true
+    },
+    "search": {
+      "enabled": true,
+      "shortcut": "Ctrl+K",
+      "filters": {
+        "difficulty": true,
+        "category": true,
+        "tags": true,
+        "notebooks": true,
+        "time_estimate": true
+      },
+      "highlight_results": true,
+      "search_descriptions": true,
+      "search_tags": true,
+      "fuzzy_search": true
+    },
+    "progress_tracking": {
+      "enabled": true,
+      "auto_mark_complete": false,
+      "completion_threshold": 0.8,
+      "track_reading_time": true,
+      "show_statistics": true,
+      "export_progress": true
+    },
+    "favorites": {
+      "enabled": true,
+      "max_favorites": 50,
+      "sync_with_localstorage": true
+    },
+    "recent_sections": {
+      "enabled": true,
+      "max_recent": 10,
+      "track_view_duration": true
+    },
+    "learning_paths": {
+      "enabled": true,
+      "show_progress": true,
+      "recommend_next": true,
+      "custom_paths": true
+    },
+    "cross_references": {
+      "enabled": true,
+      "auto_suggestions": true,
+      "see_also_sections": true,
+      "related_topics": true
+    },
+    "keyboard_shortcuts": {
+      "enabled": true,
+      "customizable": true,
+      "show_help": "Ctrl+/",
+      "toggle_sidebar": "Ctrl+B",
+      "search": "Ctrl+K",
+      "home": "Ctrl+H",
+      "previous_section": "Alt+←",
+      "next_section": "Alt+→"
+    }
+  },
+
+  "performance": {
+    "lazy_loading": true,
+    "preload_critical": true,
+    "cache_sections": true,
+    "cache_duration": 3600,
+    "compress_content": true,
+    "minify_js_css": true
+  },
+
+  "accessibility": {
+    "keyboard_navigation": true,
+    "screen_reader_support": true,
+    "high_contrast": true,
+    "focus_management": true,
+    "aria_labels": true,
+    "skip_links": true
+  },
+
+  "analytics": {
+    "track_section_views": true,
+    "track_search_queries": false,
+    "track_learning_progress": true,
+    "track_time_spent": false,
+    "anonymize_data": true
+  },
+
+  "sections": {
+    "default_view": "document",
+    "show_toc": true,
+    "show_metadata": true,
+    "show_related_sections": true,
+    "show_interactive_notebooks": true,
+    "show_prerequisites": true,
+    "estimated_reading_time": true
+  },
+
+  "learning_paths": {
+    "beginner_path": {
+      "auto_start": true,
+      "show_completion_badge": true,
+      "allow_skip": true
+    },
+    "intermediate_path": {
+      "prerequisites_check": true,
+      "show_progress_chart": true
+    },
+    "advanced_path": {
+      "require_completion": false,
+      "show_research_papers": true
+    },
+    "industry_path": {
+      "focus_on_applications": true,
+      "show_case_studies": true
+    },
+    "researcher_path": {
+      "include_references": true,
+      "show_citations": true
+    },
+    "practitioner_path": {
+      "focus_on_code": true,
+      "show_implementation": true
+    }
+  },
+
+  "export_options": {
+    "pdf": {
+      "enabled": true,
+      "include_toc": true,
+      "include_bookmarks": true
+    },
+    "markdown": {
+      "enabled": true,
+      "preserve_links": true,
+      "include_metadata": true
+    },
+    "html": {
+      "enabled": true,
+      "responsive": true,
+      "include_styles": true
+    }
+  },
+
+  "integration": {
+    "interactive_notebooks": {
+      "enabled": true,
+      "auto_launch": false,
+      "kernel_management": true
+    },
+    "collaboration": {
+      "enabled": true,
+      "share_progress": true,
+      "discussion_threads": false
+    },
+    "offline_mode": {
+      "enabled": true,
+      "cache_for_offline": true,
+      "sync_when_online": true
+    }
+  },
+
+  "customization": {
+    "branding": {
+      "show_logo": true,
+      "custom_colors": false,
+      "custom_fonts": false
+    },
+    "layout": {
+      "sidebar_position": "left",
+      "fixed_header": true,
+      "sticky_breadcrumbs": true
+    },
+    "content": {
+      "code_highlighting": true,
+      "math_rendering": true,
+      "diagram_support": true
+    }
+  },
+
+  "advanced_features": {
+    "ai_recommendations": {
+      "enabled": false,
+      "personalized_suggestions": false,
+      "adaptive_learning": false
+    },
+    "voice_navigation": {
+      "enabled": false,
+      "voice_commands": false
+    },
+    "gesture_navigation": {
+      "enabled": false,
+      "swipe_gestures": false
+    }
+  }
+}

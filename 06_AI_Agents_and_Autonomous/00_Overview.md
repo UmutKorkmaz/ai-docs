@@ -1,3 +1,10 @@
+---
+title: "Ai Agents And Autonomous - VI. AI Agents and Autonomous"
+description: "## Section Overview. Comprehensive guide covering gradient descent, reinforcement learning, algorithms, neural architectures, model training. Part of AI docu..."
+keywords: "reinforcement learning, gradient descent, reinforcement learning, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # VI. AI Agents and Autonomous Systems
 
 ## Section Overview

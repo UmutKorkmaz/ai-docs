@@ -1,3 +1,10 @@
+---
+title: "Ai In Aerospace And Defense.Md - AI in Aerospace and"
+description: "## Table of Contents. Comprehensive guide covering optimization, algorithm, classification. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, algorithm, classification, optimization, algorithm, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI in Aerospace and Defense: Comprehensive Guide
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+title: "Overview - AI Documentation Visual Assets Guide | AI"
+description: "## Overview. Comprehensive guide covering image processing, object detection, gradient descent, feature engineering, reinforcement learning. Part of AI docum..."
+keywords: "feature engineering, reinforcement learning, machine learning, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Documentation Visual Assets Guide
 
 ## Overview

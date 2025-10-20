@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Information Theory for"
+description: "## Overview. Comprehensive guide covering gradient descent, classification, algorithms, machine learning, model training. Part of AI documentation system wit..."
+keywords: "machine learning, neural networks, classification, gradient descent, classification, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Information Theory for Machine Learning
 
 ## Overview

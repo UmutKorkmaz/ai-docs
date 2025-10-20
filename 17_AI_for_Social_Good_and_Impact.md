@@ -1,3 +1,10 @@
+---
+title: "Ai For Social Good And Impact.Md - AI for Social Good and"
+description: "## Overview. Comprehensive guide covering optimization, artificial intelligence. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, artificial intelligence, optimization, artificial intelligence, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI for Social Good and Impact
 
 ## Overview

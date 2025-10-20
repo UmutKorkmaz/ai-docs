@@ -1,3 +1,10 @@
+---
+title: "Computer Vision - IV. Computer Vision and Image Processing"
+description: "## Section Overview. Comprehensive guide covering image processing, object detection, gradient descent, classification, algorithms. Part of AI documentation ..."
+keywords: "classification, computer vision, neural networks, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # IV. Computer Vision and Image Processing
 
 ## Section Overview

@@ -1,3 +1,10 @@
+---
+title: "Main Guides - The Ultimate Guide to Artificial"
+description: "This is the main index for the AI Comprehensive Guide. The guide has been split into modular files for better performance and maintainability.. Comprehensive..."
+keywords: "machine learning algorithms, algorithm, machine learning, machine learning algorithms, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # The Ultimate Guide to Artificial Intelligence: From Scratch to Latest Technologies
 
 This is the main index for the AI Comprehensive Guide. The guide has been split into modular files for better performance and maintainability.

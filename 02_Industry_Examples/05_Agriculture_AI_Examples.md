@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - AI Examples in Agriculture:"
+description: "## Table of Contents. Comprehensive guide covering image processing, object detection, classification, algorithms, model training. Part of AI documentation s..."
+keywords: "computer vision, optimization, classification, image processing, object detection, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Examples in Agriculture: Comprehensive Implementation Guide
 
 ## Table of Contents

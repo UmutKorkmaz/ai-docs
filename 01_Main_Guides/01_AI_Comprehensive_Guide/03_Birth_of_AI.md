@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Chapter 3: The Birth of AI (1940s-1950s) | AI"
+description: "> Prerequisites: Philosophical Origins. Comprehensive guide covering algorithm, language models, algorithms, artificial intelligence, machine learning. Part ..."
+keywords: "algorithm, artificial intelligence, machine learning, algorithm, language models, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Chapter 3: The Birth of AI (1940s-1950s)
 
 > **Prerequisites**: [Philosophical Origins](02_Philosophical_Origins.md)

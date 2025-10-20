@@ -1,3 +1,10 @@
+---
+title: "Overview - AI Documentation Update Summary: 2024-2025"
+description: "## Overview. Comprehensive guide covering image processing, object detection, gradient descent, algorithms, neural architectures. Part of AI documentation sy..."
+keywords: "computer vision, AI safety, neural networks, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Documentation Update Summary: 2024-2025 Cutting-Edge Developments
 
 ## Overview

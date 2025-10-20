@@ -1,3 +1,10 @@
+---
+title: "Ai Business Enterprise - Enterprise AI Strategy and"
+description: "## Overview. Comprehensive guide covering optimization, algorithm, artificial intelligence. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, algorithm, artificial intelligence, optimization, algorithm, artificial intelligence, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Enterprise AI Strategy and Governance
 
 ## Overview

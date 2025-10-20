@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - Clinical Decision Support Systems AI |"
+description: "## Module Overview. Comprehensive guide covering regression. Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: "regression, regression, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Clinical Decision Support Systems AI
 
 ## Module Overview

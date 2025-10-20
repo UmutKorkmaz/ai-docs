@@ -1,3 +1,10 @@
+---
+title: "Overview - Templates and Frameworks | AI Documentation"
+description: "This directory contains reusable templates, code frameworks, and documentation templates to accelerate AI development and standardize workflows.. Comprehensi..."
+keywords: ", , artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Templates and Frameworks
 
 This directory contains reusable templates, code frameworks, and documentation templates to accelerate AI development and standardize workflows.

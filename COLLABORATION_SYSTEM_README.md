@@ -1,3 +1,10 @@
+---
+title: "Overview - Real-Time Collaboration System for AI"
+description: "A comprehensive real-time collaboration platform that transforms static AI documentation into an interactive, community-driven learning ecosystem.. Comprehen..."
+keywords: "algorithm, neural networks, deep learning, algorithm, gradient descent, neural architectures, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Real-Time Collaboration System for AI Documentation
 
 A comprehensive real-time collaboration platform that transforms static AI documentation into an interactive, community-driven learning ecosystem.

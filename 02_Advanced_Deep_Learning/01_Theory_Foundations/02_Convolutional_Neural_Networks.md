@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - 2. Convolutional Neural Networks"
+description: "## Overview. Comprehensive guide covering object detection, image processing, classification, neural networks, optimization. Part of AI documentation system ..."
+keywords: "optimization, neural networks, classification, object detection, image processing, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 2. Convolutional Neural Networks (CNNs)
 
 ## Overview

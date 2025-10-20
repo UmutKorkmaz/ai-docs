@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Calculus and Optimization"
+description: "## Overview. Comprehensive guide covering algorithm, algorithms, machine learning, model training, regression. Part of AI documentation system with 1500+ top..."
+keywords: "machine learning, algorithm, optimization, algorithm, algorithms, machine learning, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Calculus and Optimization for Machine Learning
 
 ## Overview

@@ -1,3 +1,10 @@
+---
+title: "Natural Language Processing - III. Natural Language"
+description: "## Section Overview. Comprehensive guide covering gradient descent, classification, language models, algorithms, prompt engineering. Part of AI documentation..."
+keywords: "large language models, prompt engineering, classification, gradient descent, classification, language models, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # III. Natural Language Processing and Understanding
 
 ## Section Overview

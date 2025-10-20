@@ -1,3 +1,10 @@
+---
+title: "Ai For Smart Cities And Infrastructure - AI for Smart"
+description: "## Overview. Comprehensive guide covering optimization. Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: "optimization, optimization, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI for Smart Cities and Infrastructure: Comprehensive Guide
 
 ## Overview

@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Chapter 4: Early AI Approaches (1950s-1970s)"
+description: "> Prerequisites: Birth of AI. Comprehensive guide covering image processing, algorithm, object detection, classification, language models. Part of AI documen..."
+keywords: "natural language processing, computer vision, algorithm, image processing, algorithm, object detection, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Chapter 4: Early AI Approaches (1950s-1970s)
 
 > **Prerequisites**: [Birth of AI](03_Birth_of_AI.md)

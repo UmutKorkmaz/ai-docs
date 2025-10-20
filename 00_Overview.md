@@ -1,3 +1,10 @@
+---
+title: "Overview.Md - Comprehensive AI Topics and Research Areas"
+description: "Based on research from university curricula, conferences (NeurIPS, ICML, ICLR, CVPR), industry applications, and emerging 2024-2025 research trends, here is ..."
+keywords: "algorithm, classification, feature engineering, image processing, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Comprehensive AI Topics and Research Areas (2024-2025)
 
 Based on research from university curricula, conferences (NeurIPS, ICML, ICLR, CVPR), industry applications, and emerging 2024-2025 research trends, here is a comprehensive list of AI topics organized by category:

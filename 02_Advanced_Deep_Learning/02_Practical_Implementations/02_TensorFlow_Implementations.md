@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - TensorFlow Implementations of"
+description: "## Overview. Comprehensive guide covering gradient descent, algorithms, neural architectures, model training, backpropagation. Part of AI documentation syste..."
+keywords: "optimization, gradient descent, algorithms, neural architectures, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # TensorFlow Implementations of Advanced Deep Learning Architectures
 
 ## Overview

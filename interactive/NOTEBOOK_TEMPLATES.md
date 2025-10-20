@@ -1,3 +1,10 @@
+---
+title: "Overview - Interactive Notebook Templates for AI Example"
+description: "This directory contains comprehensive interactive notebook templates for each major section of the AI documentation, designed to provide hands-on learning ex..."
+keywords: "optimization, prompt engineering, machine learning, gradient descent, algorithms, prompt engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Interactive Notebook Templates for AI Example Projects
 
 This directory contains comprehensive interactive notebook templates for each major section of the AI documentation, designed to provide hands-on learning experiences with production-ready implementations.

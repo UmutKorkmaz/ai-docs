@@ -1,3 +1,10 @@
+---
+title: "Generative Ai - Transformer-Based Generative Models:"
+description: "## 1. Introduction to Transformer Generative Models. Comprehensive guide covering large language models, transformer models, optimization, reinforcement lear..."
+keywords: "large language models, transformer models, optimization, large language models, transformer models, optimization, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Transformer-Based Generative Models: Practical Implementations
 
 ## 1. Introduction to Transformer Generative Models

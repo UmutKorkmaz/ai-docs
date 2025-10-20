@@ -1,3 +1,10 @@
+---
+title: "Prompt Engineering And Advanced Techniques - Advanced"
+description: "## Introduction. Comprehensive guide covering optimization, prompt engineering. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, prompt engineering, optimization, prompt engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Advanced Prompt Engineering and Chain-of-Thought Reasoning (2024-2025 Edition)
 
 ## Introduction

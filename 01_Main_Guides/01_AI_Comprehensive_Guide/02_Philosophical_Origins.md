@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Chapter 2: The Philosophical Origins | AI"
+description: "> Prerequisites: Introduction to AI. Comprehensive guide covering algorithm, algorithms, artificial intelligence, machine learning, model training. Part of A..."
+keywords: "machine learning, algorithm, neural networks, algorithm, algorithms, artificial intelligence, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Chapter 2: The Philosophical Origins
 
 > **Prerequisites**: [Introduction to AI](01_Introduction_to_AI.md)

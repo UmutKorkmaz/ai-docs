@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Supervised Learning:"
+description: "## Overview. Comprehensive guide covering supervised learning, neural networks, classification, regression. Part of AI documentation system with 1500+ topics."
+keywords: "classification, neural networks, supervised learning, supervised learning, neural networks, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Supervised Learning: 2024-2025 Edition
 
 ## Overview

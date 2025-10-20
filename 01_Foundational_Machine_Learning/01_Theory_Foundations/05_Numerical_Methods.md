@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Numerical Methods in"
+description: "## Overview. Comprehensive guide covering machine learning algorithms, algorithm, gradient descent, algorithms, machine learning. Part of AI documentation sy..."
+keywords: "algorithm, machine learning algorithms, machine learning, machine learning algorithms, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Numerical Methods in Machine Learning
 
 ## Overview

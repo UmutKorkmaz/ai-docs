@@ -1,3 +1,10 @@
+---
+title: "Natural Language Processing - Transformer Architecture"
+description: "## 1. Introduction to Transformers. Comprehensive guide covering large language models, optimization. Part of AI documentation system with 1500+ topics."
+keywords: "large language models, optimization, large language models, optimization, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Transformer Architecture Theory: Mathematical Foundations
 
 ## 1. Introduction to Transformers

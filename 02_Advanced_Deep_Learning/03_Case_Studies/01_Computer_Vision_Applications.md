@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - Computer Vision Applications: Case"
+description: "## Overview. Comprehensive guide covering image processing, algorithm, gradient descent, classification, object detection. Part of AI documentation system wi..."
+keywords: "classification, algorithm, supervised learning, image processing, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Computer Vision Applications: Case Studies
 
 ## Overview

@@ -1,3 +1,10 @@
+---
+title: "Ai For Smart Cities And Infrastructure - Urban Planning and"
+description: "## Table of Contents. Comprehensive guide covering algorithm, algorithms, machine learning, model training, optimization. Part of AI documentation system wit..."
+keywords: "machine learning, algorithm, optimization, algorithm, algorithms, machine learning, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Urban Planning and Development
 
 ## Table of Contents

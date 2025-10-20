@@ -1,3 +1,10 @@
+---
+title: "Mlops And Ai Deployment Strategies - MLOps and AI"
+description: "> Navigation: \u2190 Previous: Production Best Practices | Main Index | Next: Future Trends \u2192. Comprehensive guide covering classification, algorithms, machine le..."
+keywords: "machine learning, classification, classification, algorithms, machine learning, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # MLOps and AI Deployment Strategies - Module 11: Security and Compliance
 
 > **Navigation**: [← Previous: Production Best Practices](10_Production_Best_Practices.md) | [Main Index](README.md) | [Next: Future Trends →](12_Future_Trends.md)

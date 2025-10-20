@@ -1,3 +1,10 @@
+---
+title: "Overview - AI Documentation Cross-Reference System -"
+description: "## Executive Summary. Comprehensive guide covering object detection, image processing, image classification. Part of AI documentation system with 1500+ topics."
+keywords: ", object detection, image processing, image classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Documentation Cross-Reference System - Implementation Summary
 
 ## Executive Summary

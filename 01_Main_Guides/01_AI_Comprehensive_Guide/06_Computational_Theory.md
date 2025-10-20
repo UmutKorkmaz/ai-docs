@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Chapter 6: Computational Theory | AI"
+description: "> Prerequisites: Mathematical Foundations. Comprehensive guide covering machine learning algorithms, algorithm, algorithms, clustering, machine learning. Par..."
+keywords: "algorithm, machine learning algorithms, clustering, machine learning algorithms, algorithm, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Chapter 6: Computational Theory
 
 > **Prerequisites**: [Mathematical Foundations](05_Mathematical_Foundations.md)

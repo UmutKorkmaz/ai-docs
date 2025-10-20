@@ -1,3 +1,10 @@
+---
+title: "Ai Applications Industry - VIII. AI Applications and"
+description: "## Section Overview. Comprehensive guide covering . Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: ", , artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # VIII. AI Applications and Industry Verticals
 
 ## Section Overview

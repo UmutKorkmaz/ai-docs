@@ -1,3 +1,10 @@
+---
+title: "Specialized Applications - Creative AI and Content"
+description: "## \ud83c\udfa8 Introduction to Creative AI. Comprehensive guide covering . Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: ", , artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Creative AI and Content Generation: Theoretical Foundations
 
 ## 🎨 Introduction to Creative AI

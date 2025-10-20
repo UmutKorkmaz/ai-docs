@@ -1,3 +1,10 @@
+---
+title: "Prompt Engineering And Advanced Techniques - Prompt"
+description: "## Module Overview. Comprehensive guide covering algorithms, prompt engineering, machine learning, model training, optimization. Part of AI documentation sys..."
+keywords: "machine learning, optimization, prompt engineering, algorithms, prompt engineering, machine learning, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Prompt Optimization Strategies
 
 ## Module Overview

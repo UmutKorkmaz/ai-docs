@@ -1,3 +1,10 @@
+---
+title: "Overview - AI Documentation Performance Optimization System"
+description: "## Overview. Comprehensive guide covering prompt engineering, optimization, algorithm. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, algorithm, prompt engineering, prompt engineering, optimization, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Documentation Performance Optimization System
 
 ## Overview

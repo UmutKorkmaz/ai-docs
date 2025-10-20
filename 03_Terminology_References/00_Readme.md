@@ -1,3 +1,10 @@
+---
+title: "Terminology References - Terminology References | AI"
+description: "This section contains comprehensive AI/ML/DL terminology references covering 500+ essential terms and concepts.. Comprehensive guide covering image processin..."
+keywords: "algorithm, machine learning algorithms, reinforcement learning, image processing, machine learning algorithms, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Terminology References
 
 This section contains comprehensive AI/ML/DL terminology references covering 500+ essential terms and concepts.

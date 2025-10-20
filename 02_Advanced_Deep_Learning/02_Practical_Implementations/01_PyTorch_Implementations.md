@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - PyTorch Implementations of"
+description: "## Overview. Comprehensive guide covering neural architectures, backpropagation, neural networks, gradient descent. Part of AI documentation system with 1500..."
+keywords: "neural networks, neural architectures, backpropagation, neural networks, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # PyTorch Implementations of Advanced Deep Learning Architectures
 
 ## Overview

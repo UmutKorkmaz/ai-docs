@@ -1,3 +1,10 @@
+---
+title: "Foundational Ml - Complete ML Pipeline Project Structure |"
+description: "This document provides a comprehensive overview of the project structure, file organization, and purpose of each component in the customer churn prediction p..."
+keywords: "optimization, model training, algorithm, model training, optimization, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Complete ML Pipeline Project Structure
 
 This document provides a comprehensive overview of the project structure, file organization, and purpose of each component in the customer churn prediction pipeline.

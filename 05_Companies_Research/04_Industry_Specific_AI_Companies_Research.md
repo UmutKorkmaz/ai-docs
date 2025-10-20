@@ -1,3 +1,10 @@
+---
+title: "Companies Research - Industry-Specific AI Companies"
+description: "## Table of Contents. Comprehensive guide covering image processing, algorithm, gradient descent, object detection, language models. Part of AI documentation..."
+keywords: "algorithm, reinforcement learning, computer vision, image processing, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Industry-Specific AI Companies Research 2025
 
 ## Table of Contents

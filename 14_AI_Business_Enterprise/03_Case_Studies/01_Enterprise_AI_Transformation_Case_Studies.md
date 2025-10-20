@@ -1,3 +1,10 @@
+---
+title: "Ai Business Enterprise - Enterprise AI Transformation Case"
+description: "## Overview. Comprehensive guide covering image processing, algorithm, gradient descent, object detection, algorithms. Part of AI documentation system with 1..."
+keywords: "optimization, computer vision, algorithm, image processing, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Enterprise AI Transformation Case Studies
 
 ## Overview

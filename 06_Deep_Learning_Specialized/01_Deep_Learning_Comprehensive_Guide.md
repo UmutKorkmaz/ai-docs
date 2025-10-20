@@ -1,3 +1,10 @@
+---
+title: "Deep Learning Specialized - Comprehensive Deep Learning"
+description: "## Table of Contents. Comprehensive guide covering algorithm, gradient descent, classification, neural architectures, backpropagation. Part of AI documentati..."
+keywords: "algorithm, classification, neural networks, algorithm, gradient descent, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Comprehensive Deep Learning Terminology & Architecture Guide
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+title: "Ai In Energy And Climate.Md - 24. AI in Energy and Climate"
+description: "## Table of Contents. Comprehensive guide covering optimization, algorithm, classification. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, algorithm, classification, optimization, algorithm, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 24. AI in Energy and Climate
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Linear Algebra Applications"
+description: "## Overview. Comprehensive guide covering classification, algorithms, model training, neural networks, regression. Part of AI documentation system with 1500+..."
+keywords: "neural networks, classification, regression, classification, algorithms, model training, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Linear Algebra Applications in Machine Learning
 
 ## Overview

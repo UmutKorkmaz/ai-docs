@@ -1,3 +1,10 @@
+---
+title: "Prompt Engineering And Advanced Techniques - Fundamentals"
+description: "## Module Overview. Comprehensive guide covering model training, algorithms, prompt engineering, data preprocessing. Part of AI documentation system with 150..."
+keywords: "prompt engineering, model training, algorithms, prompt engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Fundamentals of Prompt Engineering
 
 ## Module Overview

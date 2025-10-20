@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow temporary or system directories
+Disallow: /__pycache__/
+Disallow: /node_modules/
+Disallow: /.git/

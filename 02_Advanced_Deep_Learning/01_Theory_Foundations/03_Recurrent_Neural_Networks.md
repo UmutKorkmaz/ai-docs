@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - 3. Recurrent Neural Networks and"
+description: "## Overview. Comprehensive guide covering language models, neural networks, natural language processing, text processing, optimization. Part of AI documentat..."
+keywords: "natural language processing, optimization, neural networks, language models, neural networks, natural language processing, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 3. Recurrent Neural Networks and Sequential Processing
 
 ## Overview

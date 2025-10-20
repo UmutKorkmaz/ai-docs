@@ -1,3 +1,10 @@
+---
+title: "Emerging Ai Paradigms - Edge AI and Distributed"
+description: "## \ud83c\udf10 Introduction to Edge AI and Distributed Intelligence. Comprehensive guide covering model training, optimization, algorithm, neural networks. Part of AI ..."
+keywords: "optimization, model training, algorithm, model training, optimization, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Edge AI and Distributed Intelligence: Theoretical Foundations
 
 ## 🌐 Introduction to Edge AI and Distributed Intelligence

@@ -1,3 +1,10 @@
+---
+title: "Overview - Interactive Notebook Master Plan | AI"
+description: "## \ud83d\udcca Overview. Comprehensive guide covering image processing, object detection, gradient descent, algorithms, neural architectures. Part of AI documentation ..."
+keywords: "deep learning, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Interactive Notebook Master Plan
 
 ## 📊 Overview

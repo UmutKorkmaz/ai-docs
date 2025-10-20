@@ -1,3 +1,10 @@
+---
+title: "Companies Research - Ultimate AI Companies Directory 2025 |"
+description: "## Executive Summary. Comprehensive guide covering image processing, object detection, gradient descent, algorithms, neural architectures. Part of AI documen..."
+keywords: "AI safety, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Ultimate AI Companies Directory 2025
 
 ## Executive Summary

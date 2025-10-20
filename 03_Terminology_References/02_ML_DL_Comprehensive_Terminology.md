@@ -1,3 +1,10 @@
+---
+title: "Terminology References - Comprehensive AI/ML/DL Terminology"
+description: "## Table of Contents. Comprehensive guide covering transformer models, image processing, algorithm, gradient descent, classification. Part of AI documentatio..."
+keywords: "transformer models, algorithm, classification, transformer models, image processing, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Comprehensive AI/ML/DL Terminology Guide
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+title: "Overview - Interactive Learning Resources | AI Documentation"
+description: "This directory contains interactive tutorials, notebooks, and demonstrations for hands-on AI learning.. Comprehensive guide covering image processing, object..."
+keywords: "classification, machine learning, computer vision, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Interactive Learning Resources
 
 This directory contains interactive tutorials, notebooks, and demonstrations for hands-on AI learning.

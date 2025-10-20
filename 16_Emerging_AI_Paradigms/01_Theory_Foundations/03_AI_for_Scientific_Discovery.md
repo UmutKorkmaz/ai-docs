@@ -1,3 +1,10 @@
+---
+title: "Emerging Ai Paradigms - AI for Scientific Discovery:"
+description: "## \ud83d\udd2c Introduction to Scientific AI. Comprehensive guide covering machine learning algorithms, algorithm, algorithms, machine learning, model training. Part o..."
+keywords: "algorithm, machine learning algorithms, machine learning, machine learning algorithms, algorithm, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI for Scientific Discovery: Theoretical Foundations
 
 ## 🔬 Introduction to Scientific AI

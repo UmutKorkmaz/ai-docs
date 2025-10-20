@@ -1,3 +1,10 @@
+---
+title: "Future Of Ai And Emerging Trends - Sustainable and Green AI"
+description: "## Overview. Comprehensive guide covering optimization, algorithm. Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: "optimization, algorithm, optimization, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Sustainable and Green AI
 
 ## Overview

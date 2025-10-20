@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - AI Examples in Manufacturing:"
+description: "## Table of Contents. Comprehensive guide covering image processing, algorithm, object detection, classification, algorithms. Part of AI documentation system..."
+keywords: "optimization, algorithm, classification, image processing, algorithm, object detection, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Examples in Manufacturing: Comprehensive Implementation Guide
 
 ## Table of Contents

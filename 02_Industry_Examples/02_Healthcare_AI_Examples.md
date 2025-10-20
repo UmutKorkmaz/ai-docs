@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - AI Examples in Healthcare:"
+description: "## Table of Contents. Comprehensive guide covering NLP techniques, classification, feature engineering, clustering, regression. Part of AI documentation syst..."
+keywords: "NLP techniques, classification, feature engineering, NLP techniques, classification, feature engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Examples in Healthcare: Comprehensive Implementation Guide
 
 ## Table of Contents

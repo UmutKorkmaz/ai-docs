@@ -1,3 +1,10 @@
+---
+title: "Ai For Smart Cities And Infrastructure - Introduction to AI"
+description: "## Table of Contents. Comprehensive guide covering image processing, object detection, language models, algorithms, machine learning. Part of AI documentatio..."
+keywords: "machine learning, natural language processing, computer vision, image processing, object detection, language models, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Introduction to AI for Smart Cities and Infrastructure
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+title: "Generative Ai - Probabilistic Generative Models:"
+description: "## 1. Introduction to Generative Modeling. Comprehensive guide covering optimization, algorithm, regression. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, algorithm, regression, optimization, algorithm, regression, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Probabilistic Generative Models: Mathematical Foundations
 
 ## 1. Introduction to Generative Modeling

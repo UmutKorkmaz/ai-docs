@@ -1,3 +1,10 @@
+---
+title: "Ai Entertainment Media - Game AI Implementation: Practical"
+description: "## \ud83c\udfae Game AI: From Theory to Practice. Comprehensive guide covering object detection, image processing, reinforcement learning, neural networks, image classi..."
+keywords: "reinforcement learning, neural networks, object detection, image processing, reinforcement learning, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Game AI Implementation: Practical Guide
 
 ## 🎮 Game AI: From Theory to Practice

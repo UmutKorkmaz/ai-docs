@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - 5. Graph Neural Networks | AI"
+description: "## Overview. Comprehensive guide covering image processing, algorithm, object detection, classification, reinforcement learning. Part of AI documentation sys..."
+keywords: "algorithm, classification, reinforcement learning, image processing, algorithm, object detection, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 5. Graph Neural Networks
 
 ## Overview

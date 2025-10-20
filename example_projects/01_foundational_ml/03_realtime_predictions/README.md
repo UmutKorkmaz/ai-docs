@@ -1,3 +1,10 @@
+---
+title: "Foundational Ml - Real-time Prediction System | AI"
+description: "Production-ready real-time ML system with stream processing, low-latency predictions, and scalable microservices architecture.. Comprehensive guide covering ..."
+keywords: "feature engineering, feature engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Real-time Prediction System
 
 Production-ready real-time ML system with stream processing, low-latency predictions, and scalable microservices architecture.

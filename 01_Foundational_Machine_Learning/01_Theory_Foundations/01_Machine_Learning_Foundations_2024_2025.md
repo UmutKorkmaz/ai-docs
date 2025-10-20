@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Machine Learning"
+description: "## Overview. Comprehensive guide covering machine learning algorithms, algorithm, classification, algorithms, machine learning. Part of AI documentation syst..."
+keywords: "algorithm, machine learning algorithms, classification, machine learning algorithms, algorithm, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Machine Learning Foundations: 2024-2025 Edition
 
 ## Overview

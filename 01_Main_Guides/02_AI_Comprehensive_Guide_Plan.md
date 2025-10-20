@@ -1,3 +1,10 @@
+---
+title: "Main Guides - AI Comprehensive Guide: From Scratch to"
+description: "## Document Creation Plan. Comprehensive guide covering image processing, machine learning algorithms, algorithm, gradient descent, language models. Part of ..."
+keywords: "algorithm, machine learning algorithms, feature engineering, image processing, machine learning algorithms, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Comprehensive Guide: From Scratch to Latest Technologies
 
 ## Document Creation Plan

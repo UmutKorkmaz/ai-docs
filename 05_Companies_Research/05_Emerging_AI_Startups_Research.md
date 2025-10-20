@@ -1,3 +1,10 @@
+---
+title: "Companies Research - Emerging AI Startups Research Report"
+description: "## Executive Summary. Comprehensive guide covering image processing, object detection, gradient descent, language models, feature engineering. Part of AI doc..."
+keywords: "feature engineering, reinforcement learning, computer vision, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Emerging AI Startups Research Report 2024-2025
 
 ## Executive Summary

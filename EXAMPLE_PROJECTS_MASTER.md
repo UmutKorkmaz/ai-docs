@@ -1,3 +1,10 @@
+---
+title: "Overview - Comprehensive AI Example Projects | AI"
+description: "This directory contains hands-on, production-ready example projects covering all major AI categories from our documentation. Each project is designed to be e..."
+keywords: "computer vision, deep learning, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Comprehensive AI Example Projects
 
 This directory contains hands-on, production-ready example projects covering all major AI categories from our documentation. Each project is designed to be educational, practical, and serve as a foundation for real-world applications.

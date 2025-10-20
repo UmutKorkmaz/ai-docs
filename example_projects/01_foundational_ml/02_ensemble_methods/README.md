@@ -1,3 +1,10 @@
+---
+title: "Foundational Ml - Ensemble Methods and Optimization Project"
+description: "Advanced ensemble techniques and hyperparameter optimization strategies for building robust machine learning models.. Comprehensive guide covering algorithm,..."
+keywords: "optimization, algorithm, feature engineering, algorithm, feature engineering, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Ensemble Methods and Optimization Project
 
 Advanced ensemble techniques and hyperparameter optimization strategies for building robust machine learning models.

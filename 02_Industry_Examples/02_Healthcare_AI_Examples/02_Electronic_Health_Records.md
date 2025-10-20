@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - Electronic Health Records (EHR)"
+description: "## Module Overview. Comprehensive guide covering NLP techniques, regression, feature engineering. Part of AI documentation system with 1500+ topics."
+keywords: "NLP techniques, feature engineering, regression, NLP techniques, regression, feature engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Electronic Health Records (EHR) Management AI
 
 ## Module Overview

@@ -1,3 +1,10 @@
+---
+title: "Foundational Ml - Complete ML Pipeline Project | AI"
+description: "A comprehensive, production-ready machine learning pipeline that demonstrates the entire ML lifecycle from data preprocessing to deployment and monitoring.. ..."
+keywords: "optimization, feature engineering, regression, feature engineering, algorithms, model training, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Complete ML Pipeline Project
 
 A comprehensive, production-ready machine learning pipeline that demonstrates the entire ML lifecycle from data preprocessing to deployment and monitoring.

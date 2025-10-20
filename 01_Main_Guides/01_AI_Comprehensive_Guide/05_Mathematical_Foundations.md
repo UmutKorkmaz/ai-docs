@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Chapter 5: Mathematical Foundations | AI"
+description: "> Prerequisites: Early AI Approaches | Basic college mathematics. Comprehensive guide covering image processing, machine learning algorithms, algorithm, clas..."
+keywords: "algorithm, machine learning algorithms, classification, image processing, machine learning algorithms, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Chapter 5: Mathematical Foundations
 
 > **Prerequisites**: [Early AI Approaches](04_Early_AI_Approaches.md) | Basic college mathematics

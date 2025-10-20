@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Main Guides | AI Documentation | AI tutorials"
+description: "This section contains the core AI documentation that forms the foundation of the learning system.. Comprehensive guide covering machine learning algorithms, ..."
+keywords: "machine learning, machine learning algorithms, algorithm, machine learning algorithms, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Main Guides
 
 This section contains the core AI documentation that forms the foundation of the learning system.

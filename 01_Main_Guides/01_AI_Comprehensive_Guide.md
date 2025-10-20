@@ -1,3 +1,10 @@
+---
+title: "Main Guides - The Ultimate Guide to Artificial"
+description: "---. Comprehensive guide covering image processing, algorithm, gradient descent, classification, language models. Part of AI documentation system with 1500+ ..."
+keywords: "algorithm, classification, reinforcement learning, image processing, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # The Ultimate Guide to Artificial Intelligence: From Scratch to Latest Technologies
 
 ---

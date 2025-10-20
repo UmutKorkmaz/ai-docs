@@ -1,3 +1,10 @@
+---
+title: "Ai For Smart Cities And Infrastructure - Intelligent"
+description: "## Table of Contents. Comprehensive guide covering algorithms, optimization, model training, data preprocessing. Part of AI documentation system with 1500+ t..."
+keywords: "optimization, algorithms, optimization, model training, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Intelligent Transportation Systems
 
 ## Table of Contents

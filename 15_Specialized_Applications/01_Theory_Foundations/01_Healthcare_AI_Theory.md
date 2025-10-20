@@ -1,3 +1,10 @@
+---
+title: "Specialized Applications - Healthcare AI: Theoretical"
+description: "## \ud83c\udfe5 Introduction to Healthcare AI. Comprehensive guide covering image processing, object detection, classification, language models, neural networks. Part o..."
+keywords: "neural networks, classification, regression, image processing, object detection, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Healthcare AI: Theoretical Foundations
 
 ## 🏥 Introduction to Healthcare AI

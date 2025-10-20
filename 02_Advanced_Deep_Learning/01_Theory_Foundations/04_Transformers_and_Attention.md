@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - 4. Transformers and Attention"
+description: "## Overview. Comprehensive guide covering image processing, object detection, gradient descent, language models, neural architectures. Part of AI documentati..."
+keywords: "natural language processing, computer vision, optimization, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 4. Transformers and Attention Mechanisms
 
 ## Overview

@@ -1,3 +1,10 @@
+---
+title: "Overview - Exercises and Projects | AI Documentation"
+description: "This directory contains hands-on exercises, assignments, and projects to reinforce AI concepts and build practical skills.. Comprehensive guide covering algo..."
+keywords: "algorithm, classification, clustering, algorithm, gradient descent, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Exercises and Projects
 
 This directory contains hands-on exercises, assignments, and projects to reinforce AI concepts and build practical skills.

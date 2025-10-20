@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Documentation Reader - Comprehensive Learning Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h1>AI Documentation Reader</h1>
+            <p>Preparing your learning environment...</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>AI Docs Reader</span>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="globalSearch" placeholder="Search documentation...">
+                    <div class="search-shortcut">Ctrl+K</div>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="user-controls">
+                    <button class="control-btn" id="bookmarkBtn" title="Bookmarks">
+                        <i class="fas fa-bookmark"></i>
+                        <span class="badge" id="bookmarkCount">0</span>
+                    </button>
+                    <button class="control-btn" id="progressBtn" title="Progress">
+                        <i class="fas fa-chart-line"></i>
+                    </button>
+                    <button class="control-btn" id="notesBtn" title="Notes">
+                        <i class="fas fa-sticky-note"></i>
+                    </button>
+                    <div class="theme-toggle">
+                        <button class="control-btn" id="themeToggle" title="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                    <div class="reading-controls">
+                        <button class="control-btn" id="fontDecrease" title="Decrease font size">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <button class="control-btn" id="fontIncrease" title="Increase font size">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="control-btn" id="distractionFree" title="Distraction-free mode">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <nav class="breadcrumb" id="breadcrumb">
+            <a href="#" class="breadcrumb-item" data-section="home">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Learning Path Selector -->
+            <div class="learning-path-selector">
+                <label for="pathSelect">Learning Path</label>
+                <select id="pathSelect">
+                    <option value="">Browse All Content</option>
+                    <option value="beginner">Beginner Path</option>
+                    <option value="intermediate">Intermediate Path</option>
+                    <option value="advanced">Advanced Path</option>
+                    <option value="researcher">Researcher Path</option>
+                    <option value="practitioner">Industry Practitioner</option>
+                </select>
+            </div>
+
+            <!-- Section Navigation -->
+            <div class="section-nav">
+                <div class="nav-group">
+                    <div class="nav-group-header">
+                        <i class="fas fa-book"></i>
+                        <span>Documentation Sections</span>
+                    </div>
+                    <div class="nav-items" id="sectionNav">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-btn" id="continueReading">
+                    <i class="fas fa-play"></i>
+                    Continue Reading
+                </button>
+                <button class="action-btn" id="randomTopic">
+                    <i class="fas fa-random"></i>
+                    Random Topic
+                </button>
+                <button class="action-btn" id="bookmarksList">
+                    <i class="fas fa-bookmark"></i>
+                    View Bookmarks
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Content Header -->
+            <div class="content-header">
+                <div class="content-meta">
+                    <span class="difficulty-badge" id="difficultyBadge">Beginner</span>
+                    <span class="reading-time" id="readingTime">5 min read</span>
+                    <span class="last-updated" id="lastUpdated">Updated recently</span>
+                </div>
+                <div class="content-actions">
+                    <button class="action-btn" id="toggleBookmark">
+                        <i class="far fa-bookmark"></i>
+                        Bookmark
+                    </button>
+                    <button class="action-btn" id="shareContent">
+                        <i class="fas fa-share"></i>
+                        Share
+                    </button>
+                    <button class="action-btn" id="exportPdf">
+                        <i class="fas fa-file-pdf"></i>
+                        Export PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Display -->
+            <div class="content-display">
+                <article class="markdown-content" id="markdownContent">
+                    <div class="content-placeholder">
+                        <i class="fas fa-book-open"></i>
+                        <h2>Welcome to AI Documentation Reader</h2>
+                        <p>Select a section from the navigation to begin your learning journey.</p>
+                        <div class="quick-start-cards">
+                            <div class="card" data-section="01_Foundational_Machine_Learning">
+                                <i class="fas fa-brain"></i>
+                                <h3>Foundational ML</h3>
+                                <p>Start with the basics of machine learning</p>
+                            </div>
+                            <div class="card" data-section="03_Natural_Language_Processing">
+                                <i class="fas fa-language"></i>
+                                <h3>Natural Language</h3>
+                                <p>Explore language processing and understanding</p>
+                            </div>
+                            <div class="card" data-section="04_Computer_Vision">
+                                <i class="fas fa-eye"></i>
+                                <h3>Computer Vision</h3>
+                                <p>Learn about image and video processing</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents" id="tableOfContents">
+                <div class="toc-header">
+                    <h4>Table of Contents</h4>
+                    <button class="toc-toggle" id="tocToggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="toc-content" id="tocContent">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Reading Progress -->
+            <div class="reading-progress-widget">
+                <h4>Reading Progress</h4>
+                <div class="progress-overview">
+                    <div class="circular-progress" id="overallProgress">
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="topicsRead">0</span>
+                            <span class="stat-label">Topics Read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="timeSpent">0h</span>
+                            <span class="stat-label">Time Spent</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-details">
+                    <div class="progress-item">
+                        <span>Current Section</span>
+                        <div class="mini-progress">
+                            <div class="mini-progress-fill" id="sectionProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Content -->
+            <div class="related-content-widget">
+                <h4>Related Content</h4>
+                <div class="related-items" id="relatedItems">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <!-- Notes Panel -->
+            <div class="notes-panel" id="notesPanel">
+                <div class="panel-header">
+                    <h4>Your Notes</h4>
+                    <button class="add-note-btn" id="addNoteBtn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="notes-list" id="notesList">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Modals -->
+    <!-- Bookmarks Modal -->
+    <div class="modal" id="bookmarksModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Your Bookmarks</h3>
+                <button class="modal-close" data-modal="bookmarksModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="bookmarks-list" id="bookmarksList">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Modal -->
+    <div class="modal" id="progressModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Learning Progress</h3>
+                <button class="modal-close" data-modal="progressModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="progress-charts">
+                    <div class="chart-container">
+                        <canvas id="progressChart"></canvas>
+                    </div>
+                    <div class="achievements-list">
+                        <h4>Achievements</h4>
+                        <div class="achievements" id="achievementsList">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notes Modal -->
+    <div class="modal" id="notesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Your Notes</h3>
+                <button class="modal-close" data-modal="notesModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="notes-editor">
+                    <textarea id="noteEditor" placeholder="Write your notes here..."></textarea>
+                    <div class="note-actions">
+                        <button class="btn btn-primary" id="saveNoteBtn">Save Note</button>
+                        <button class="btn btn-secondary" id="cancelNoteBtn">Cancel</button>
+                    </div>
+                </div>
+                <div class="notes-history" id="notesHistory">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Reading Preferences</h3>
+                <button class="modal-close" data-modal="settingsModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h4>Display Settings</h4>
+                    <div class="setting-item">
+                        <label for="fontFamily">Font Family</label>
+                        <select id="fontFamily">
+                            <option value="Inter">Inter (Default)</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Arial">Arial</option>
+                            <option value="JetBrains Mono">JetBrains Mono</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label for="lineHeight">Line Height</label>
+                        <input type="range" id="lineHeight" min="1.2" max="2.0" step="0.1" value="1.6">
+                    </div>
+                    <div class="setting-item">
+                        <label for="maxWidth">Max Content Width</label>
+                        <input type="range" id="maxWidth" min="600" max="1200" step="50" value="800">
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h4>Learning Preferences</h4>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="autoSaveProgress">
+                            Auto-save reading progress
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="showRelatedContent">
+                            Show related content suggestions
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enableNotifications">
+                            Enable learning reminders
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.1/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/bookmarks.js"></script>
+    <script src="js/notes.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

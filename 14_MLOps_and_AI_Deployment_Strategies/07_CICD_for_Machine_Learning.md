@@ -1,3 +1,10 @@
+---
+title: "Mlops And Ai Deployment Strategies - CI/CD for Machine"
+description: "Navigation: \u2190 Module 6: Model Management and Versioning | Main Index | Module 8: Edge AI and Federated Learning \u2192. Comprehensive guide covering machine learn..."
+keywords: "machine learning, model training, machine learning, model training, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # CI/CD for Machine Learning
 
 **Navigation**: [← Module 6: Model Management and Versioning](06_Model_Management_and_Versioning.md) | [Main Index](README.md) | [Module 8: Edge AI and Federated Learning →](08_Edge_AI_and_Federated_Learning.md)

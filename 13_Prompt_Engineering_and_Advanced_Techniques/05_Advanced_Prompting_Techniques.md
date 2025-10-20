@@ -1,3 +1,10 @@
+---
+title: "Prompt Engineering And Advanced Techniques - Advanced"
+description: "## Module Overview. Comprehensive guide covering optimization. Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: "optimization, optimization, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Advanced Prompting Techniques
 
 ## Module Overview

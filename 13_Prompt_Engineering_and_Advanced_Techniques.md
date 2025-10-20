@@ -1,3 +1,10 @@
+---
+title: "Prompt Engineering And Advanced Techniques.Md - Advanced"
+description: "## Introduction. Comprehensive guide covering classification, algorithms, prompt engineering, machine learning, model training. Part of AI documentation syst..."
+keywords: "machine learning, optimization, prompt engineering, classification, algorithms, prompt engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Advanced Prompt Engineering and Chain-of-Thought Reasoning (2024-2025 Edition)
 
 ## Introduction

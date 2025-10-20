@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Linear Algebra for Machine"
+description: "## Overview. Comprehensive guide covering machine learning algorithms, algorithm, algorithms, clustering, machine learning. Part of AI documentation system w..."
+keywords: "algorithm, machine learning algorithms, clustering, machine learning algorithms, algorithm, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Linear Algebra for Machine Learning
 
 ## Overview

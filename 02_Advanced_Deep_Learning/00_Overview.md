@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - II. Advanced Deep Learning"
+description: "## Section Overview. Comprehensive guide covering image processing, algorithm, gradient descent, object detection, language models. Part of AI documentation ..."
+keywords: "algorithm, computer vision, deep learning frameworks, image processing, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # II. Advanced Deep Learning Architectures
 
 ## Section Overview

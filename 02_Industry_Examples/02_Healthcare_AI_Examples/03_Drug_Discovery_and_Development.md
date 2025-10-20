@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - Drug Discovery and Development AI | AI"
+description: "## Module Overview. Comprehensive guide covering optimization, clustering. Part of AI documentation system with 1500+ topics."
+keywords: "optimization, clustering, optimization, clustering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Drug Discovery and Development AI
 
 ## Module Overview

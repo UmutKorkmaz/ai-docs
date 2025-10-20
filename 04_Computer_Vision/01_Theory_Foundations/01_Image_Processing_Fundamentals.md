@@ -1,3 +1,10 @@
+---
+title: "Computer Vision - Image Processing Fundamentals | AI"
+description: "## Overview. Comprehensive guide covering object detection, image processing, algorithm, image classification. Part of AI documentation system with 1500+ top..."
+keywords: "algorithm, object detection, image processing, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Image Processing Fundamentals
 
 ## Overview

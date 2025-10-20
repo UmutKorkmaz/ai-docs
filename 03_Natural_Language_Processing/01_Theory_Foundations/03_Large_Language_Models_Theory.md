@@ -1,3 +1,10 @@
+---
+title: "Natural Language Processing - Large Language Models Theory:"
+description: "## 1. Introduction to Large Language Models. Comprehensive guide covering transformer models, gradient descent, neural architectures, backpropagation, neural..."
+keywords: "large language models, transformer models, optimization, transformer models, gradient descent, neural architectures, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Large Language Models Theory: Mathematical Foundations and Scaling Laws
 
 ## 1. Introduction to Large Language Models

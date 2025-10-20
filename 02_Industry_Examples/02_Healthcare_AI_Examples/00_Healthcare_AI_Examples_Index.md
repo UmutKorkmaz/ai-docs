@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - Healthcare AI Examples: Modular"
+description: "## Overview. Comprehensive guide covering . Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: ", , artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Healthcare AI Examples: Modular Documentation
 
 ## Overview

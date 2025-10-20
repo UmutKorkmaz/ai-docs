@@ -1,3 +1,10 @@
+---
+title: "Ai In Agriculture And Food Systems.Md - AI in Agriculture"
+description: "## Table of Contents. Comprehensive guide covering algorithms, machine learning, model training, optimization, data preprocessing. Part of AI documentation s..."
+keywords: "machine learning, optimization, algorithms, machine learning, model training, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI in Agriculture and Food Systems: Comprehensive Guide (2024-2025 Edition)
 
 ## Table of Contents

@@ -1,3 +1,10 @@
+---
+title: "Main Guides - Chapter 1: Introduction to Artificial"
+description: "> Prerequisites: None - This is the starting point for all AI learning. Comprehensive guide covering algorithm, gradient descent, algorithms, artificial inte..."
+keywords: "optimization, algorithm, artificial intelligence, algorithm, gradient descent, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Chapter 1: Introduction to Artificial Intelligence
 
 > **Prerequisites**: None - This is the starting point for all AI learning

@@ -1,3 +1,10 @@
+---
+title: "Foundational Ml - Foundation ML Projects | AI Documentation"
+description: "Welcome to the Foundation Machine Learning projects! This section contains comprehensive, production-ready projects that demonstrate fundamental ML concepts ..."
+keywords: "algorithm, feature engineering, machine learning, algorithm, feature engineering, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Foundation ML Projects
 
 Welcome to the Foundation Machine Learning projects! This section contains comprehensive, production-ready projects that demonstrate fundamental ML concepts and techniques.

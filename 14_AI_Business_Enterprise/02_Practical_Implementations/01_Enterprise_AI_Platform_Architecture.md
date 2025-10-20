@@ -1,3 +1,10 @@
+---
+title: "Ai Business Enterprise - Enterprise AI Platform"
+description: "## Overview. Comprehensive guide covering classification, algorithms, model training, optimization, data preprocessing. Part of AI documentation system with ..."
+keywords: "model training, optimization, classification, classification, algorithms, model training, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Enterprise AI Platform Architecture
 
 ## Overview

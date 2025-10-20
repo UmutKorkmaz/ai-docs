@@ -1,3 +1,10 @@
+---
+title: "Ai For Smart Cities And Infrastructure - Case Studies and"
+description: "## Table of Contents. Comprehensive guide covering . Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: ", , artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Case Studies and Real-World Applications
 
 ## Table of Contents

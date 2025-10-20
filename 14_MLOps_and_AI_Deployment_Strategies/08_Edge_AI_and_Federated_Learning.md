@@ -1,3 +1,10 @@
+---
+title: "Mlops And Ai Deployment Strategies - Edge AI and Federated"
+description: "Navigation: \u2190 Module 7: CI/CD for Machine Learning | Main Index | Module 9: AIOps and Automation \u2192. Comprehensive guide covering algorithm, algorithms, machi..."
+keywords: "machine learning, algorithm, optimization, algorithm, algorithms, machine learning, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Edge AI and Federated Learning
 
 **Navigation**: [← Module 7: CI/CD for Machine Learning](07_CICD_for_Machine_Learning.md) | [Main Index](README.md) | [Module 9: AIOps and Automation →](09_AIOps_and_Automation.md)

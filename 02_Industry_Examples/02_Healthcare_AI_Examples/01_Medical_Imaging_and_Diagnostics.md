@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - Medical Imaging and Diagnostics AI | AI"
+description: "## Module Overview. Comprehensive guide covering classification. Part of AI documentation system with 1500+ topics. artificial intelligence documentation"
+keywords: "classification, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Medical Imaging and Diagnostics AI
 
 ## Module Overview

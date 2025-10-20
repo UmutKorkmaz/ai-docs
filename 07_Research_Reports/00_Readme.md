@@ -1,3 +1,10 @@
+---
+title: "Research Reports - Research Reports | AI Documentation"
+description: "This section contains specialized research reports on various AI topics and developments.. Comprehensive guide covering prompt engineering. Part of AI docume..."
+keywords: "prompt engineering, prompt engineering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Research Reports
 
 This section contains specialized research reports on various AI topics and developments.

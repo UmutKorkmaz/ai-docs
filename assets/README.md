@@ -1,3 +1,10 @@
+---
+title: "Overview - Assets Directory | AI Documentation"
+description: "This directory contains multimedia assets for the AI documentation system.. Comprehensive guide covering . Part of AI documentation system with 1500+ topics."
+keywords: ", , artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Assets Directory
 
 This directory contains multimedia assets for the AI documentation system.

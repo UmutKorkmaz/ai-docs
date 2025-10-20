@@ -1,3 +1,10 @@
+---
+title: "Industry Examples - AI in Education: Comprehensive"
+description: "## Overview. Comprehensive guide covering classification, algorithms, clustering, model training, data preprocessing. Part of AI documentation system with 15..."
+keywords: "classification, clustering, classification, algorithms, clustering, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI in Education: Comprehensive Implementation Examples
 
 ## Overview

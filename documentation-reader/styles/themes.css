@@ -1,0 +1,150 @@
+/* Theme System */
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-elevated: #334155;
+    --border: #475569;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-inverse: #0f172a;
+}
+
+/* High Contrast Theme */
+[data-theme="high-contrast"] {
+    --background: #000000;
+    --surface: #1a1a1a;
+    --surface-elevated: #2d2d2d;
+    --border: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --text-inverse: #000000;
+
+    --primary-color: #0066ff;
+    --primary-dark: #0052cc;
+    --primary-light: #1a75ff;
+}
+
+/* Sepia Theme */
+[data-theme="sepia"] {
+    --background: #f4ecd8;
+    --surface: #e8dcc0;
+    --surface-elevated: #dcd4b8;
+    --border: #c8b89a;
+    --text-primary: #5d4037;
+    --text-secondary: #795548;
+    --text-muted: #8d6e63;
+    --text-inverse: #f4ecd8;
+
+    --primary-color: #8d6e63;
+    --primary-dark: #6d4c41;
+    --primary-light: #a1887f;
+}
+
+/* Eye Care Theme */
+[data-theme="eye-care"] {
+    --background: #f5f5dc;
+    --surface: #f0f0e6;
+    --surface-elevated: #e8e8dc;
+    --border: #d4d4c0;
+    --text-primary: #2c3e50;
+    --text-secondary: #34495e;
+    --text-muted: #7f8c8d;
+    --text-inverse: #f5f5dc;
+
+    --primary-color: #27ae60;
+    --primary-dark: #229954;
+    --primary-light: #2ecc71;
+}
+
+/* Theme Transitions */
+body {
+    transition: background-color var(--transition-normal),
+                color var(--transition-normal);
+}
+
+.header, .sidebar, .right-sidebar {
+    transition: background-color var(--transition-normal),
+                border-color var(--transition-normal);
+}
+
+.surface-elevated {
+    transition: background-color var(--transition-normal),
+                border-color var(--transition-normal);
+}
+
+/* Custom Scrollbars for Themes */
+[data-theme="dark"] ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Focus Styles for Accessibility */
+.btn:focus,
+.control-btn:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .sidebar,
+    .right-sidebar,
+    .breadcrumb-container,
+    .content-header,
+    .table-of-contents,
+    .modal {
+        display: none !important;
+    }
+
+    .main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .content-display {
+        padding: 0 !important;
+        max-width: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .card {
+        break-inside: avoid;
+        border: 1px solid #ccc !important;
+    }
+}

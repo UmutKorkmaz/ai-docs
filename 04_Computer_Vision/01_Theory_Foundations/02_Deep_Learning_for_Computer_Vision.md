@@ -1,3 +1,10 @@
+---
+title: "Computer Vision - Deep Learning for Computer Vision | AI"
+description: "## Overview. Comprehensive guide covering image processing, object detection, gradient descent, classification, neural architectures. Part of AI documentatio..."
+keywords: "classification, neural networks, supervised learning, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Deep Learning for Computer Vision
 
 ## Overview

@@ -1,3 +1,10 @@
+---
+title: "Deep Learning Specialized - Deep Learning Quick Reference"
+description: "## Essential Concepts and Architectures. Comprehensive guide covering algorithm, gradient descent, classification, neural architectures, backpropagation. Par..."
+keywords: "algorithm, classification, neural networks, algorithm, gradient descent, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Deep Learning Quick Reference Guide
 
 ## Essential Concepts and Architectures

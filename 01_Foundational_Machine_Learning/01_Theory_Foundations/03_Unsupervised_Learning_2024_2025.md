@@ -1,3 +1,10 @@
+---
+title: "Foundational Machine Learning - Unsupervised Learning:"
+description: "## Overview. Comprehensive guide covering algorithm, gradient descent, classification, clustering, neural architectures. Part of AI documentation system with..."
+keywords: "algorithm, classification, clustering, algorithm, gradient descent, classification, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Unsupervised Learning: 2024-2025 Edition
 
 ## Overview

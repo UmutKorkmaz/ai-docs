@@ -1,3 +1,10 @@
+---
+title: "Future Of Ai And Emerging Trends - Edge AI and Distributed"
+description: "## Overview. Comprehensive guide covering object detection, image processing, algorithm, computer vision, optimization. Part of AI documentation system with ..."
+keywords: "optimization, computer vision, algorithm, object detection, image processing, algorithm, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Edge AI and Distributed Intelligence
 
 ## Overview

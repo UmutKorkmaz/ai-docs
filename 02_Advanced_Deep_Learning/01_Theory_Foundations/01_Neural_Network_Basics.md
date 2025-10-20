@@ -1,3 +1,10 @@
+---
+title: "Advanced Deep Learning - 1. Neural Network Fundamentals |"
+description: "## Overview. Comprehensive guide covering algorithm, gradient descent, algorithms, neural architectures, model training. Part of AI documentation system with..."
+keywords: "optimization, algorithm, neural networks, algorithm, gradient descent, algorithms, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 1. Neural Network Fundamentals
 
 ## Overview

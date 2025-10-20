@@ -1,3 +1,10 @@
+---
+title: "Structure Guide.Md - AI Documentation System Structure"
+description: "## \ud83c\udfd7\ufe0f Complete Directory Structure Overview. Comprehensive guide covering image processing, object detection, gradient descent, language models, reinforcemen..."
+keywords: "reinforcement learning, prompt engineering, machine learning, image processing, object detection, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # AI Documentation System Structure Guide
 
 ## 🏗️ Complete Directory Structure Overview

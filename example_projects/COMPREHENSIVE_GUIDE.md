@@ -1,3 +1,10 @@
+---
+title: "Overview - Comprehensive Guide to AI Example Projects | AI"
+description: "This guide provides a complete overview of the AI example projects collection, featuring production-ready implementations across all major AI categories with..."
+keywords: "NLP techniques, algorithm, classification, NLP techniques, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Comprehensive Guide to AI Example Projects
 
 This guide provides a complete overview of the AI example projects collection, featuring production-ready implementations across all major AI categories with progressive complexity and real-world applications.

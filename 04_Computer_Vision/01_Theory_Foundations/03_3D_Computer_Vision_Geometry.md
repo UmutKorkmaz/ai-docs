@@ -1,3 +1,10 @@
+---
+title: "Computer Vision - 3D Computer Vision and Geometry | AI"
+description: "## Overview. Comprehensive guide covering object detection, image processing, optimization, image classification. Part of AI documentation system with 1500+ ..."
+keywords: "optimization, object detection, image processing, optimization, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # 3D Computer Vision and Geometry
 
 ## Overview

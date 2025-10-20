@@ -1,3 +1,10 @@
+---
+title: "Natural Language Processing - Linguistic Foundations for"
+description: "## 1. Introduction to Linguistic Theory. Comprehensive guide covering NLP techniques, algorithm, gradient descent, language models, neural architectures. Par..."
+keywords: "NLP techniques, algorithm, neural networks, NLP techniques, algorithm, gradient descent, artificial intelligence, machine learning, AI documentation"
+author: "AI Documentation Team"
+---
+
 # Linguistic Foundations for NLP
 
 ## 1. Introduction to Linguistic Theory
