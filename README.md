@@ -7,6 +7,16 @@ author: "AI Documentation Team"
 
 # Comprehensive AI Documentation System
 
+## 🎯 Quick Navigation
+
+**🗺️ [Master Navigation Index](NAVIGATION_INDEX.md)** - Your complete guide to all resources
+**📚 [Browse All 25 Sections](00_Overview.md)** - Detailed section overview
+**📓 [Interactive Notebooks](interactive/notebooks/)** - 75+ hands-on learning notebooks
+**💻 [Code Examples](code_examples/)** - 200+ practical Python examples
+**🎓 [Learning Paths](NAVIGATION_INDEX.md#browse-by-learning-path)** - Guided learning journeys
+
+---
+
 ## Overview
 This is a comprehensive AI documentation system covering 25 major sections with 1500+ AI topics and research areas. The system is organized for progressive learning from foundational concepts to advanced research and applications, featuring both theoretical documentation and hands-on interactive notebooks.
 
