@@ -1,0 +1,532 @@
+<svg width="1600" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="deployGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1200" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="800" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1E293B">
+    MLOps Pipeline: End-to-End Machine Learning Operations
+  </text>
+  <text x="800" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748B">
+    Automated • Scalable • Reproducible • Monitorable
+  </text>
+
+  <!-- Main Pipeline Flow -->
+
+  <!-- Data Engineering Layer -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="350" height="250" rx="15" fill="url(#dataGrad)" filter="url(#shadow)"/>
+    <text x="175" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      Data Engineering
+    </text>
+
+    <!-- Data Sources -->
+    <g transform="translate(20, 50)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">
+        Data Sources
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3B82F6">
+        Databases • APIs • Files • Streaming
+      </text>
+    </g>
+
+    <!-- Data Ingestion -->
+    <g transform="translate(20, 100)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#E0E7FF" stroke="#6366F1" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4338CA">
+        Data Ingestion
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6366F1">
+        Batch • Real-time • CDC
+      </text>
+    </g>
+
+    <!-- Data Processing -->
+    <g transform="translate(20, 150)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#C7D2FE" stroke="#818CF8" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4C1D95">
+        Data Processing
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#818CF8">
+        Clean • Transform • Validate
+      </text>
+    </g>
+
+    <!-- Feature Store -->
+    <g transform="translate(20, 200)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#A5B4FC" stroke="#6366F1" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4338CA">
+        Feature Store
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6366F1">
+        Online • Offline • Registry
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 400 245 L 480 245" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Model Development Layer -->
+  <g transform="translate(480, 120)">
+    <rect x="0" y="0" width="350" height="250" rx="15" fill="url(#mlGrad)" filter="url(#shadow)"/>
+    <text x="175" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      Model Development
+    </text>
+
+    <!-- Experiment Tracking -->
+    <g transform="translate(20, 50)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#047857">
+        Experiment Tracking
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        MLflow • Weights &amp; Biases • Neptune
+      </text>
+    </g>
+
+    <!-- Model Training -->
+    <g transform="translate(20, 100)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#A7F3D0" stroke="#34D399" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#065F46">
+        Model Training
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#34D399">
+        AutoML • Hyperparameter Tuning
+      </text>
+    </g>
+
+    <!-- Model Evaluation -->
+    <g transform="translate(20, 150)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#6EE7B7" stroke="#10B981" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#047857">
+        Model Evaluation
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#10B981">
+        Metrics • Validation • Testing
+      </text>
+    </g>
+
+    <!-- Model Registry -->
+    <g transform="translate(20, 200)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#34D399" stroke="#059669" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#064E3B">
+        Model Registry
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#059669">
+        Versioning • Metadata • Artifacts
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 830 245 L 910 245" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Deployment Layer -->
+  <g transform="translate(910, 120)">
+    <rect x="0" y="0" width="350" height="250" rx="15" fill="url(#deployGrad)" filter="url(#shadow)"/>
+    <text x="175" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      Model Deployment
+    </text>
+
+    <!-- Model Packaging -->
+    <g transform="translate(20, 50)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">
+        Model Packaging
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B">
+        Containerization • Dependencies
+      </text>
+    </g>
+
+    <!-- CI/CD Pipeline -->
+    <g transform="translate(20, 100)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#FDE68A" stroke="#F59E0B" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">
+        CI/CD Pipeline
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B">
+        Automated • Triggered • Validated
+      </text>
+    </g>
+
+    <!-- Deployment Strategies -->
+    <g transform="translate(20, 150)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#FCD34D" stroke="#F59E0B" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">
+        Deployment Strategies
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#F59E0B">
+        Canary • Blue-Green • Shadow
+      </text>
+    </g>
+
+    <!-- Serving Infrastructure -->
+    <g transform="translate(20, 200)">
+      <rect x="0" y="0" width="310" height="40" rx="6" fill="#FBBF24" stroke="#D97706" stroke-width="1"/>
+      <text x="155" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">
+        Serving Infrastructure
+      </text>
+      <text x="155" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#D97706">
+        APIs • Endpoints • Load Balancers
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 1260 245 L 1340 245" stroke="#64748B" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Monitoring Layer -->
+  <g transform="translate(1340, 120)">
+    <rect x="0" y="0" width="230" height="250" rx="15" fill="url(#monitorGrad)" filter="url(#shadow)"/>
+    <text x="115" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      Monitoring
+    </text>
+
+    <!-- Performance Monitoring -->
+    <g transform="translate(10, 50)">
+      <rect x="0" y="0" width="210" height="40" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991B1B">
+        Performance
+      </text>
+      <text x="105" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">
+        Latency • Throughput • Errors
+      </text>
+    </g>
+
+    <!-- Model Drift -->
+    <g transform="translate(10, 100)">
+      <rect x="0" y="0" width="210" height="40" rx="6" fill="#FECACA" stroke="#EF4444" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991B1B">
+        Model Drift
+      </text>
+      <text x="105" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">
+        Concept • Data • Accuracy
+      </text>
+    </g>
+
+    <!-- Alerting -->
+    <g transform="translate(10, 150)">
+      <rect x="0" y="0" width="210" height="40" rx="6" fill="#FCA5A5" stroke="#EF4444" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991B1B">
+        Alerting
+      </text>
+      <text x="105" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#EF4444">
+        Thresholds • Notifications
+      </text>
+    </g>
+
+    <!-- Retraining -->
+    <g transform="translate(10, 200)">
+      <rect x="0" y="0" width="210" height="40" rx="6" fill="#F87171" stroke="#DC2626" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991B1B">
+        Retraining
+      </text>
+      <text x="105" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#DC2626">
+        Automated • Scheduled
+      </text>
+    </g>
+  </g>
+
+  <!-- Feedback Loop -->
+  <path d="M 1455 370 Q 1455 450 1085 450 Q 225 450 225 370" stroke="#64748B" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <text x="840" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748B">
+    Feedback Loop &amp; Continuous Improvement
+  </text>
+
+  <!-- Infrastructure and Tools Section -->
+  <g transform="translate(50, 520)">
+    <rect x="0" y="0" width="1500" height="200" rx="15" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="750" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#334155">
+      MLOps Tools and Technologies
+    </text>
+
+    <!-- Tool Categories -->
+    <g transform="translate(50, 70)">
+      <!-- Data Engineering Tools -->
+      <rect x="0" y="0" width="280" height="100" rx="8" fill="#E0E7FF" stroke="#6366F1" stroke-width="2"/>
+      <text x="140" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4338CA">
+        Data Engineering
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="12" fill="#6366F1">
+        • Apache Spark • Databricks
+      </text>
+      <text x="15" y="70" font-family="Arial, sans-serif" font-size="12" fill="#6366F1">
+        • Airflow • dbt • Great Expectations
+      </text>
+      <text x="15" y="90" font-family="Arial, sans-serif" font-size="12" fill="#6366F1">
+        • Feast • Hopsworks
+      </text>
+    </g>
+
+    <g transform="translate(350, 70)">
+      <!-- ML Platforms -->
+      <rect x="0" y="0" width="280" height="100" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+      <text x="140" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#047857">
+        ML Platforms
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+        • MLflow • Kubeflow
+      </text>
+      <text x="15" y="70" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+        • TensorFlow Extended • SageMaker
+      </text>
+      <text x="15" y="90" font-family="Arial, sans-serif" font-size="12" fill="#10B981">
+        • Vertex AI • Azure ML
+      </text>
+    </g>
+
+    <g transform="translate(650, 70)">
+      <!-- Experiment Tracking -->
+      <rect x="0" y="0" width="280" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+      <text x="140" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400E">
+        Experiment Tracking
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="12" fill="#F59E0B">
+        • Weights &amp; Biases • Neptune
+      </text>
+      <text x="15" y="70" font-family="Arial, sans-serif" font-size="12" fill="#F59E0B">
+        • Comet • MLflow Tracking
+      </text>
+      <text x="15" y="90" font-family="Arial, sans-serif" font-size="12" fill="#F59E0B">
+        • TensorBoard • ClearML
+      </text>
+    </g>
+
+    <g transform="translate(950, 70)">
+      <!-- Deployment & Serving -->
+      <rect x="0" y="0" width="280" height="100" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+      <text x="140" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#991B1B">
+        Deployment &amp; Serving
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="12" fill="#EF4444">
+        • Docker • Kubernetes
+      </text>
+      <text x="15" y="70" font-family="Arial, sans-serif" font-size="12" fill="#EF4444">
+        • KServe • Seldon Core
+      </text>
+      <text x="15" y="90" font-family="Arial, sans-serif" font-size="12" fill="#EF4444">
+        • TorchServe • Triton
+      </text>
+    </g>
+
+    <g transform="translate(1250, 70)">
+      <!-- Monitoring -->
+      <rect x="0" y="0" width="200" height="100" rx="8" fill="#E0E7FF" stroke="#8B5CF6" stroke-width="2"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#6D28D9">
+        Monitoring
+      </text>
+      <text x="15" y="50" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6">
+        • Prometheus • Grafana
+      </text>
+      <text x="15" y="70" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6">
+        • Evidently • Arize
+      </text>
+      <text x="15" y="90" font-family="Arial, sans-serif" font-size="12" fill="#8B5CF6">
+        • WhyLabs • Fiddler
+      </text>
+    </g>
+  </g>
+
+  <!-- Key MLOps Principles -->
+  <g transform="translate(50, 750)">
+    <rect x="0" y="0" width="1500" height="180" rx="15" fill="#1E293B" filter="url(#shadow)"/>
+    <text x="750" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white">
+      Key MLOps Principles
+    </text>
+
+    <!-- Principle boxes -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="220" height="90" rx="8" fill="#3B82F6"/>
+      <text x="110" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Automation
+      </text>
+      <text x="110" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+        Reduce manual intervention
+      </text>
+      <text x="110" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+        Automated pipelines
+      </text>
+      <text x="110" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+        Self-healing systems
+      </text>
+    </g>
+
+    <g transform="translate(300, 60)">
+      <rect x="0" y="0" width="220" height="90" rx="8" fill="#10B981"/>
+      <text x="110" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Reproducibility
+      </text>
+      <text x="110" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+        Version everything
+      </text>
+      <text x="110" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+        Environment consistency
+      </text>
+      <text x="110" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+        Experiment tracking
+      </text>
+    </g>
+
+    <g transform="translate(550, 60)">
+      <rect x="0" y="0" width="220" height="90" rx="8" fill="#F59E0B"/>
+      <text x="110" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Scalability
+      </text>
+      <text x="110" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        Handle data growth
+      </text>
+      <text x="110" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        Model scaling
+      </text>
+      <text x="110" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        Infrastructure elasticity
+      </text>
+    </g>
+
+    <g transform="translate(800, 60)">
+      <rect x="0" y="0" width="220" height="90" rx="8" fill="#EF4444"/>
+      <text x="110" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Monitoring
+      </text>
+      <text x="110" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+        Real-time insights
+      </text>
+      <text x="110" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+        Performance metrics
+      </text>
+      <text x="110" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+        Drift detection
+      </text>
+    </g>
+
+    <g transform="translate(1050, 60)">
+      <rect x="0" y="0" width="220" height="90" rx="8" fill="#8B5CF6"/>
+      <text x="110" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Governance
+      </text>
+      <text x="110" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#C4B5FD">
+        Compliance &amp; security
+      </text>
+      <text x="110" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#C4B5FD">
+        Model validation
+      </text>
+      <text x="110" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#C4B5FD">
+        Audit trails
+      </text>
+    </g>
+
+    <g transform="translate(1300, 60)">
+      <rect x="0" y="0" width="150" height="90" rx="8" fill="#EC4899"/>
+      <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Collaboration
+      </text>
+      <text x="75" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FBCFE8">
+        Cross-functional
+      </text>
+      <text x="75" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FBCFE8">
+        Knowledge sharing
+      </text>
+      <text x="75" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FBCFE8">
+        Team alignment
+      </text>
+    </g>
+  </g>
+
+  <!-- Success Metrics -->
+  <g transform="translate(50, 960)">
+    <rect x="0" y="0" width="1500" height="120" rx="12" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+    <text x="750" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#15803D">
+      MLOps Success Metrics
+    </text>
+
+    <g transform="translate(50, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16A34A">
+        Deployment Frequency:
+      </text>
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#166534">
+        Multiple deployments per day → High maturity
+      </text>
+    </g>
+
+    <g transform="translate(300, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16A34A">
+        Lead Time:
+      </text>
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#166534">
+        Code commit to production &lt; 1 hour → Optimized
+      </text>
+    </g>
+
+    <g transform="translate(550, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16A34A">
+        Change Failure Rate:
+      </text>
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#166534">
+        &lt; 15% deployment failures → High reliability
+      </text>
+    </g>
+
+    <g transform="translate(800, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16A34A">
+        Model Performance:
+      </text>
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#166534">
+        Consistent accuracy &gt; 95% → High quality
+      </text>
+    </g>
+
+    <g transform="translate(1050, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16A34A">
+        Monitoring Coverage:
+      </text>
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#166534">
+        100% model and system monitoring → Complete visibility
+      </text>
+    </g>
+  </g>
+
+  <!-- Interactive elements note -->
+  <g transform="translate(50, 1110)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#64748B">
+      💡 Interactive elements: Hover over components for detailed descriptions • Click on tool names for documentation links
+    </text>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+    </marker>
+  </defs>
+</svg>
