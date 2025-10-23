@@ -8,9 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run copy-docs && npm run build",
+    "predeploy": "npm run copy-docs && npm run generate-config && npm run build",
     "deploy": "gh-pages -d dist",
-    "copy-docs": "node copy-docs.js"
+    "copy-docs": "node copy-docs.js",
+    "generate-config": "node generate-docs-config.js"
   },
   "dependencies": {
     "highlight.js": "^11.11.1",
