@@ -1,0 +1,339 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="timelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DB2777;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#0F172A"/>
+
+  <!-- Title -->
+  <text x="700" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">
+    Neural Network Architecture Evolution
+  </text>
+  <text x="700" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">
+    From Perceptrons to Transformers: A Journey Through Deep Learning History
+  </text>
+
+  <!-- Timeline Base -->
+  <line x1="100" y1="120" x2="1300" y2="120" stroke="url(#timelineGrad)" stroke-width="4"/>
+
+  <!-- Era Labels -->
+  <text x="200" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60A5FA">
+    1950s-1980s
+  </text>
+  <text x="400" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#A78BFA">
+    1980s-2000s
+  </text>
+  <text x="600" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F472B6">
+    2000s-2010s
+  </text>
+  <text x="800" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FB923C">
+    2010s-2015
+  </text>
+  <text x="1000" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#34D399">
+    2015-2020
+  </text>
+  <text x="1200" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F87171">
+    2020-Present
+  </text>
+
+  <!-- Architecture Nodes -->
+
+  <!-- 1. Perceptron (1958) -->
+  <g transform="translate(200, 200)">
+    <circle cx="0" cy="0" r="8" fill="#60A5FA" filter="url(#glow)"/>
+    <line x1="0" y1="8" x2="0" y2="40" stroke="#60A5FA" stroke-width="2"/>
+
+    <rect x="-80" y="40" width="160" height="100" rx="10" fill="#1E3A8A" filter="url(#shadow)"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Perceptron
+    </text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+      1958 • Rosenblatt
+    </text>
+    <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#60A5FA">
+      Single neuron model
+    </text>
+    <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#60A5FA">
+      Linear classification
+    </text>
+  </g>
+
+  <!-- 2. Multi-Layer Perceptron (1986) -->
+  <g transform="translate(400, 200)">
+    <circle cx="0" cy="0" r="8" fill="#A78BFA" filter="url(#glow)"/>
+    <line x1="0" y1="8" x2="0" y2="40" stroke="#A78BFA" stroke-width="2"/>
+
+    <rect x="-80" y="40" width="160" height="120" rx="10" fill="#5B21B6" filter="url(#shadow)"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      MLP
+    </text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#C4B5FD">
+      1986 • Rumelhart
+    </text>
+    <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A78BFA">
+      Hidden layers
+    </text>
+    <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A78BFA">
+      Backpropagation
+    </text>
+    <text x="0" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A78BFA">
+      Non-linear activation
+    </text>
+  </g>
+
+  <!-- 3. CNN (1989) -->
+  <g transform="translate(600, 200)">
+    <circle cx="0" cy="0" r="8" fill="#F472B6" filter="url(#glow)"/>
+    <line x1="0" y1="8" x2="0" y2="40" stroke="#F472B6" stroke-width="2"/>
+
+    <rect x="-80" y="40" width="160" height="120" rx="10" fill="#9F1239" filter="url(#shadow)"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      CNN
+    </text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FBCFE8">
+      1989 • LeCun
+    </text>
+    <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F472B6">
+      Convolutional layers
+    </text>
+    <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F472B6">
+      Pooling operations
+    </text>
+    <text x="0" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F472B6">
+      Spatial hierarchies
+    </text>
+  </g>
+
+  <!-- 4. RNN/LSTM (1997) -->
+  <g transform="translate(800, 200)">
+    <circle cx="0" cy="0" r="8" fill="#FB923C" filter="url(#glow)"/>
+    <line x1="0" y1="8" x2="0" y2="40" stroke="#FB923C" stroke-width="2"/>
+
+    <rect x="-80" y="40" width="160" height="120" rx="10" fill="#9A3412" filter="url(#shadow)"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      LSTM
+    </text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+      1997 • Hochreiter
+    </text>
+    <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FB923C">
+      Memory cells
+    </text>
+    <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FB923C">
+      Gating mechanisms
+    </text>
+    <text x="0" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FB923C">
+      Sequence modeling
+    </text>
+  </g>
+
+  <!-- 5. Transformer (2017) -->
+  <g transform="translate(1000, 200)">
+    <circle cx="0" cy="0" r="8" fill="#34D399" filter="url(#glow)"/>
+    <line x1="0" y1="8" x2="0" y2="40" stroke="#34D399" stroke-width="2"/>
+
+    <rect x="-80" y="40" width="160" height="140" rx="10" fill="#065F46" filter="url(#shadow)"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Transformer
+    </text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+      2017 • Vaswani
+    </text>
+    <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#34D399">
+      Self-attention
+    </text>
+    <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#34D399">
+      Parallel processing
+    </text>
+    <text x="0" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#34D399">
+      Positional encoding
+    </text>
+    <text x="0" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#34D399">
+      Encoder-decoder
+    </text>
+  </g>
+
+  <!-- 6. GPT/LLMs (2020-Present) -->
+  <g transform="translate(1200, 200)">
+    <circle cx="0" cy="0" r="8" fill="#F87171" filter="url(#glow)"/>
+    <line x1="0" y1="8" x2="0" y2="40" stroke="#F87171" stroke-width="2"/>
+
+    <rect x="-80" y="40" width="160" height="140" rx="10" fill="#991B1B" filter="url(#shadow)"/>
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      GPT/LLMs
+    </text>
+    <text x="0" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      2020+ • OpenAI
+    </text>
+    <text x="0" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F87171">
+      100B+ parameters
+    </text>
+    <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F87171">
+      Zero-shot learning
+    </text>
+    <text x="0" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F87171">
+      Emergent abilities
+    </text>
+    <text x="0" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F87171">
+      Foundation models
+    </text>
+  </g>
+
+  <!-- Technical Specifications Box -->
+  <g transform="translate(100, 380)">
+    <rect x="0" y="0" width="1200" height="200" rx="15" fill="#1E293B" filter="url(#shadow)"/>
+    <text x="600" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+      Technical Evolution Highlights
+    </text>
+
+    <!-- Parameter Growth -->
+    <g transform="translate(50, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60A5FA">
+        Parameter Scale:
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">
+        1958: 1 neuron → 1989: 60K weights → 1997: 1M parameters → 2017: 100M → 2020: 1.5B → 2024: 2T+
+      </text>
+    </g>
+
+    <!-- Computing Power -->
+    <g transform="translate(50, 110)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#A78BFA">
+        Computing Power:
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">
+        CPU → Single GPU → Multi-GPU → TPU Clusters → Distributed Supercomputers
+      </text>
+    </g>
+
+    <!-- Training Data -->
+    <g transform="translate(650, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F472B6">
+        Training Data:
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">
+        KB → MB → GB → TB → Petabytes (Web-scale datasets)
+      </text>
+    </g>
+
+    <!-- Key Breakthroughs -->
+    <g transform="translate(650, 110)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FB923C">
+        Key Breakthroughs:
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">
+        Backpropagation (1986) • ReLU (2010) • Dropout (2014) • Attention (2017) • Scaling Laws (2020)
+      </text>
+    </g>
+  </g>
+
+  <!-- Applications Timeline -->
+  <g transform="translate(100, 620)">
+    <rect x="0" y="0" width="1200" height="180" rx="15" fill="#334155" filter="url(#shadow)"/>
+    <text x="600" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      Real-World Applications by Era
+    </text>
+
+    <!-- Application columns -->
+    <g transform="translate(50, 60)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#60A5FA">
+        1950s-80s
+      </text>
+      <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Pattern recognition
+      </text>
+      <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Simple classification
+      </text>
+    </g>
+
+    <g transform="translate(250, 60)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#A78BFA">
+        1980s-2000s
+      </text>
+      <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Handwriting recognition
+      </text>
+      <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Financial forecasting
+      </text>
+    </g>
+
+    <g transform="translate(450, 60)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F472B6">
+        2000s-2010s
+      </text>
+      <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Image recognition
+      </text>
+      <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Speech processing
+      </text>
+    </g>
+
+    <g transform="translate(650, 60)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FB923C">
+        2010s-2015
+      </text>
+      <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Machine translation
+      </text>
+      <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Game playing AI
+      </text>
+    </g>
+
+    <g transform="translate(850, 60)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#34D399">
+        2015-2020
+      </text>
+      <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Language models
+      </text>
+      <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Computer vision
+      </text>
+    </g>
+
+    <g transform="translate(1050, 60)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F87171">
+        2020-Present
+      </text>
+      <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Generative AI
+      </text>
+      <text x="80" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94A3B8">
+        Scientific discovery
+      </text>
+    </g>
+  </g>
+
+  <!-- Interactive legend -->
+  <g transform="translate(50, 830)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#64748B">
+      💡 Hover over architectures for details • Click to explore applications • Timeline shows major breakthroughs and their impact
+    </text>
+  </g>
+
+  <!-- Connection lines between related architectures -->
+  <path d="M 280 240 Q 340 220 320 240" stroke="#475569" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 480 240 Q 540 220 520 240" stroke="#475569" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 680 240 Q 740 220 720 240" stroke="#475569" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 880 240 Q 940 220 920 240" stroke="#475569" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 1080 240 Q 1140 220 1120 240" stroke="#475569" stroke-width="1" fill="none" opacity="0.5"/>
+</svg>

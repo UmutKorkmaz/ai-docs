@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/dtumkorkmaz/Projects/ai-docs/logs/.a347f96b94389a96a4eaa81b82086fddbb29e4b4-audit.json",
+    "files": [
+        {
+            "date": 1758619349237,
+            "name": "/Users/dtumkorkmaz/Projects/ai-docs/logs/mcp-puppeteer-2025-09-23.log",
+            "hash": "8b839f2b45fa47be291860e64461633d6d416c5719a85d1e82ea9e26113e8b1c"
+        },
+        {
+            "date": 1758999077531,
+            "name": "/Users/dtumkorkmaz/Projects/ai-docs/logs/mcp-puppeteer-2025-09-27.log",
+            "hash": "45971e5ee4da23fa0ba138cdf9dbb6ad9cb61a9e45dc4ca24b1b345f57e9e48a"
+        },
+        {
+            "date": 1759239310039,
+            "name": "/Users/dtumkorkmaz/Projects/ai-docs/logs/mcp-puppeteer-2025-09-30.log",
+            "hash": "a4bf3ceceabce8d1ae8209e2a17ff036ec090b6dcebe1e2da160ea6ff16c1f2e"
+        },
+        {
+            "date": 1759495180922,
+            "name": "/Users/dtumkorkmaz/Projects/ai-docs/logs/mcp-puppeteer-2025-10-03.log",
+            "hash": "b4803ef1cfaf55c57baf8011902dfcb3f7e906a2347000b82a80e268c9bda3fd"
+        }
+    ],
+    "hashType": "sha256"
+}
