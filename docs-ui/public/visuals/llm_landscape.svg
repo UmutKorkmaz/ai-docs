@@ -1,0 +1,475 @@
+<svg width="1800" height="1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="modelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="toolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="infraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1800" height="1400" fill="#0F172A"/>
+
+  <!-- Title -->
+  <text x="900" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">
+    Large Language Model Ecosystem Landscape
+  </text>
+  <text x="900" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">
+    Models • Tools • Applications • Infrastructure • Research (2024-2025)
+  </text>
+
+  <!-- Central LLM Hub -->
+  <g transform="translate(750, 350)">
+    <circle cx="150" cy="150" r="120" fill="url(#modelGrad)" filter="url(#glow)" opacity="0.8"/>
+    <text x="150" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+      Large Language
+    </text>
+    <text x="150" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+      Models
+    </text>
+    <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#C4B5FD">
+      Foundation Models
+    </text>
+  </g>
+
+  <!-- Model Families Branching from Center -->
+
+  <!-- OpenAI Models -->
+  <g transform="translate(200, 200)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#1E40AF" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      OpenAI
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+      GPT-4 Turbo
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+      GPT-4o
+    </text>
+    <text x="90" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#93C5FD">
+      o1 Models
+    </text>
+  </g>
+
+  <!-- Anthropic Models -->
+  <g transform="translate(200, 340)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#991B1B" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Anthropic
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      Claude 3.5 Opus
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      Claude 3.5 Sonnet
+    </text>
+    <text x="90" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      Claude 3.5 Haiku
+    </text>
+  </g>
+
+  <!-- Google Models -->
+  <g transform="translate(200, 480)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#059669" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Google
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+      Gemini 1.5 Pro
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+      Gemini 1.5 Flash
+    </text>
+    <text x="90" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A7F3D0">
+      Gemma Models
+    </text>
+  </g>
+
+  <!-- Open Source Models -->
+  <g transform="translate(1270, 200)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#7C3AED" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Open Source
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#DDD6FE">
+      LLaMA 3.1/3.2
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#DDD6FE">
+      Mistral
+    </text>
+    <text x="90" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#DDD6FE">
+      Mixtral 8x22B
+    </text>
+  </g>
+
+  <!-- Specialized Models -->
+  <g transform="translate(1270, 340)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#DC2626" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Specialized
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      Code Llama
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      Mathstral
+    </text>
+    <text x="90" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FCA5A5">
+      Phi-3 Mini
+    </text>
+  </g>
+
+  <!-- Emerging Models -->
+  <g transform="translate(1270, 480)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#EA580C" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Emerging
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+      Grok-1
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+      Command R+
+    </text>
+    <text x="90" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+      DeepSeek-V2
+    </text>
+  </g>
+
+  <!-- Tools and Frameworks Layer -->
+  <g transform="translate(50, 680)">
+    <rect x="0" y="0" width="1700" height="200" rx="15" fill="url(#toolGrad)" filter="url(#shadow)"/>
+    <text x="850" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+      Development Tools &amp; Frameworks
+    </text>
+
+    <!-- Tool categories -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="250" height="100" rx="8" fill="#0891B2"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Orchestration
+      </text>
+      <text x="125" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        LangChain • LlamaIndex
+      </text>
+      <text x="125" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        AutoGen • CrewAI
+      </text>
+      <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Semantic Kernel
+      </text>
+    </g>
+
+    <g transform="translate(320, 60)">
+      <rect x="0" y="0" width="250" height="100" rx="8" fill="#0891B2"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Fine-tuning
+      </text>
+      <text x="125" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Hugging Face • Axolotl
+      </text>
+      <text x="125" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        PEFT • LoRA
+      </text>
+      <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        TRL • DPO
+      </text>
+    </g>
+
+    <g transform="translate(590, 60)">
+      <rect x="0" y="0" width="250" height="100" rx="8" fill="#0891B2"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Evaluation
+      </text>
+      <text x="125" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        LangSmith • Ragas
+      </text>
+      <text x="125" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Phoenix Arize • DeepEval
+      </text>
+      <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        MLflow LLM Tracking
+      </text>
+    </g>
+
+    <g transform="translate(860, 60)">
+      <rect x="0" y="0" width="250" height="100" rx="8" fill="#0891B2"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Deployment
+      </text>
+      <text x="125" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        vLLM • TensorRT-LLM
+      </text>
+      <text x="125" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Text Generation Inference
+      </text>
+      <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        CTranslate2 • llama.cpp
+      </text>
+    </g>
+
+    <g transform="translate(1130, 60)">
+      <rect x="0" y="0" width="250" height="100" rx="8" fill="#0891B2"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        APIs &amp; SDKs
+      </text>
+      <text x="125" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        OpenAI API • Anthropic SDK
+      </text>
+      <text x="125" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Google Vertex AI • Azure
+      </text>
+      <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Ollama • LocalAI
+      </text>
+    </g>
+
+    <g transform="translate(1400, 60)">
+      <rect x="0" y="0" width="250" height="100" rx="8" fill="#0891B2"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        Monitoring
+      </text>
+      <text x="125" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        LangFuse • Helicone
+      </text>
+      <text x="125" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Portkey • PromptLayer
+      </text>
+      <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A5F3FC">
+        Honeycomb • OpenTelemetry
+      </text>
+    </g>
+  </g>
+
+  <!-- Application Layer -->
+  <g transform="translate(50, 920)">
+    <rect x="0" y="0" width="1700" height="180" rx="15" fill="url(#appGrad)" filter="url(#shadow)"/>
+    <text x="850" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+      Applications &amp; Use Cases
+    </text>
+
+    <!-- Application categories -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Content Creation
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Writing • Code • Art
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Music • Video
+      </text>
+    </g>
+
+    <g transform="translate(270, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Analysis &amp; Insights
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Data Analysis • Research
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Financial • Medical
+      </text>
+    </g>
+
+    <g transform="translate(490, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Customer Service
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Chatbots • Support
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Virtual Agents
+      </text>
+    </g>
+
+    <g transform="translate(710, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Education
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Tutoring • Training
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Assessment
+      </text>
+    </g>
+
+    <g transform="translate(930, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Healthcare
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Diagnosis • Research
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Drug Discovery
+      </text>
+    </g>
+
+    <g transform="translate(1150, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Enterprise
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Automation • Workflow
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Decision Support
+      </text>
+    </g>
+
+    <g transform="translate(1370, 60)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#059669"/>
+      <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Research
+      </text>
+      <text x="100" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Scientific • Academic
+      </text>
+      <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A7F3D0">
+        Literature Review
+      </text>
+    </g>
+  </g>
+
+  <!-- Infrastructure Layer -->
+  <g transform="translate(50, 1130)">
+    <rect x="0" y="0" width="1700" height="150" rx="15" fill="url(#infraGrad)" filter="url(#shadow)"/>
+    <text x="850" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+      Infrastructure &amp; Hardware
+    </text>
+
+    <!-- Infrastructure categories -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="250" height="60" rx="8" fill="#D97706"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Cloud Platforms
+      </text>
+      <text x="125" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        AWS • GCP • Azure • Oracle
+      </text>
+    </g>
+
+    <g transform="translate(320, 60)">
+      <rect x="0" y="0" width="250" height="60" rx="8" fill="#D97706"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        GPU Hardware
+      </text>
+      <text x="125" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        NVIDIA • AMD • Intel
+      </text>
+    </g>
+
+    <g transform="translate(590, 60)">
+      <rect x="0" y="0" width="250" height="60" rx="8" fill="#D97706"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Specialized AI Chips
+      </text>
+      <text x="125" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        TPU • NPU • Inferentia
+      </text>
+    </g>
+
+    <g transform="translate(860, 60)">
+      <rect x="0" y="0" width="250" height="60" rx="8" fill="#D97706"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Model Hubs
+      </text>
+      <text x="125" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        Hugging Face • ModelScope
+      </text>
+    </g>
+
+    <g transform="translate(1130, 60)">
+      <rect x="0" y="0" width="250" height="60" rx="8" fill="#D97706"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Data Platforms
+      </text>
+      <text x="125" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        Databricks • Snowflake
+      </text>
+    </g>
+
+    <g transform="translate(1400, 60)">
+      <rect x="0" y="0" width="250" height="60" rx="8" fill="#D97706"/>
+      <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        Edge Devices
+      </text>
+      <text x="125" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FED7AA">
+        Mobile • IoT • Local
+      </text>
+    </g>
+  </g>
+
+  <!-- Connection lines from center to model boxes -->
+  <line x1="750" y1="450" x2="380" y2="260" stroke="#64748B" stroke-width="2" opacity="0.5"/>
+  <line x1="750" y1="480" x2="380" y2="400" stroke="#64748B" stroke-width="2" opacity="0.5"/>
+  <line x1="750" y1="510" x2="380" y2="540" stroke="#64748B" stroke-width="2" opacity="0.5"/>
+  <line x1="1050" y1="450" x2="1270" y2="260" stroke="#64748B" stroke-width="2" opacity="0.5"/>
+  <line x1="1050" y1="480" x2="1270" y2="400" stroke="#64748B" stroke-width="2" opacity="0.5"/>
+  <line x1="1050" y1="510" x2="1270" y2="540" stroke="#64748B" stroke-width="2" opacity="0.5"/>
+
+  <!-- Model Statistics Box -->
+  <g transform="translate(450, 130)">
+    <rect x="0" y="0" width="300" height="80" rx="10" fill="#1E293B" filter="url(#shadow)"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60A5FA">
+      Model Scale Evolution (2024-2025)
+    </text>
+    <text x="150" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">
+      Parameters: 7B → 70B → 2T+
+    </text>
+    <text x="150" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">
+      Context: 4K → 128K → 1M+ tokens
+    </text>
+  </g>
+
+  <!-- Interactive legend -->
+  <g transform="translate(50, 1320)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#64748B">
+      🌐 Interactive Ecosystem Map • Click on any component for detailed information • Hover for quick stats
+    </text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#64748B">
+      📊 Real-time updates • Community contributions • Latest model releases
+    </text>
+  </g>
+
+  <!-- Version and update info -->
+  <g transform="translate(1550, 1320)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" fill="#64748B">
+      Last Updated: September 2025
+    </text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" fill="#64748B">
+      Version: 2.1
+    </text>
+  </g>
+</svg>

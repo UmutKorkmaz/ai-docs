@@ -1,0 +1,633 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-09-28",
+    "total_concepts": 250,
+    "total_relationships": 1200
+  },
+  "concepts": {
+    "foundational": {
+      "linear_algebra": {
+        "id": "foundational_linear_algebra",
+        "name": "Linear Algebra",
+        "section": "01_Foundational_Machine_Learning",
+        "category": "theory",
+        "difficulty": "beginner",
+        "prerequisites": [],
+        "applications": [
+          "neural_networks",
+          "transformers",
+          "dimensionality_reduction",
+          "graph_neural_networks"
+        ],
+        "implementations": [
+          "matrix_operations_implementation",
+          "eigenvalue_computation"
+        ],
+        "case_studies": [
+          "pca_image_compression",
+          "recommendation_systems"
+        ],
+        "tags": ["mathematics", "foundations", "vectors", "matrices"]
+      },
+      "calculus_optimization": {
+        "id": "foundational_calculus_optimization",
+        "name": "Calculus and Optimization",
+        "section": "01_Foundational_Machine_Learning",
+        "category": "theory",
+        "difficulty": "beginner",
+        "prerequisites": ["linear_algebra"],
+        "applications": [
+          "neural_network_training",
+          "gradient_descent",
+          "deep_learning_optimization"
+        ],
+        "implementations": [
+          "gradient_descent_implementation",
+          "backpropagation_algorithm"
+        ],
+        "case_studies": [
+          "training_neural_networks",
+          "optimizing_large_models"
+        ],
+        "tags": ["mathematics", "optimization", "gradients", "calculus"]
+      },
+      "probability_theory": {
+        "id": "foundational_probability_theory",
+        "name": "Probability Theory",
+        "section": "01_Foundational_Machine_Learning",
+        "category": "theory",
+        "difficulty": "beginner",
+        "prerequisites": [],
+        "applications": [
+          "bayesian_methods",
+          "reinforcement_learning",
+          "generative_models",
+          "uncertainty_quantification"
+        ],
+        "implementations": [
+          "bayesian_inference",
+          "monte_carlo_methods"
+        ],
+        "case_studies": [
+          "probabilistic_forecasting",
+          "uncertainty_in_ai"
+        ],
+        "tags": ["mathematics", "probability", "statistics", "bayesian"]
+      }
+    },
+    "deep_learning": {
+      "neural_networks": {
+        "id": "deep_learning_neural_networks",
+        "name": "Neural Networks",
+        "section": "02_Advanced_Deep_Learning",
+        "category": "theory",
+        "difficulty": "intermediate",
+        "prerequisites": [
+          "linear_algebra",
+          "calculus_optimization",
+          "probability_theory"
+        ],
+        "applications": [
+          "computer_vision",
+          "natural_language_processing",
+          "speech_recognition"
+        ],
+        "implementations": [
+          "feedforward_nn",
+          "multilayer_perceptron"
+        ],
+        "case_studies": [
+          "image_classification",
+          "pattern_recognition"
+        ],
+        "tags": ["deep_learning", "networks", "perceptrons", "backpropagation"]
+      },
+      "transformers": {
+        "id": "deep_learning_transformers",
+        "name": "Transformers",
+        "section": "02_Advanced_Deep_Learning",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "neural_networks",
+          "attention_mechanisms",
+          "sequence_modeling"
+        ],
+        "applications": [
+          "large_language_models",
+          "machine_translation",
+          "text_generation"
+        ],
+        "implementations": [
+          "bert_implementation",
+          "gpt_architecture",
+          "t5_model"
+        ],
+        "case_studies": [
+          "chatgpt_development",
+          "multilingual_translation"
+        ],
+        "tags": ["transformers", "attention", "nlp", "language_models"]
+      },
+      "cnn": {
+        "id": "deep_learning_cnn",
+        "name": "Convolutional Neural Networks",
+        "section": "02_Advanced_Deep_Learning",
+        "category": "theory",
+        "difficulty": "intermediate",
+        "prerequisites": [
+          "neural_networks",
+          "image_processing"
+        ],
+        "applications": [
+          "computer_vision",
+          "medical_imaging",
+          "object_detection"
+        ],
+        "implementations": [
+          "lenet_architecture",
+          "resnet_implementation",
+          "vgg_networks"
+        ],
+        "case_studies": [
+          "image_classification",
+          "medical_diagnosis"
+        ],
+        "tags": ["cnn", "computer_vision", "convolution", "feature_extraction"]
+      }
+    },
+    "nlp": {
+      "language_models": {
+        "id": "nlp_language_models",
+        "name": "Language Models",
+        "section": "03_Natural_Language_Processing",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "transformers",
+          "neural_networks",
+          "probability_theory"
+        ],
+        "applications": [
+          "text_generation",
+          "machine_translation",
+          "question_answering"
+        ],
+        "implementations": [
+          "gpt_series",
+          "bert_models",
+          "llama_family"
+        ],
+        "case_studies": [
+          "chatgpt",
+          "claude_ai",
+          "gemini_models"
+        ],
+        "tags": ["nlp", "language_models", "transformers", "generation"]
+      },
+      "sentiment_analysis": {
+        "id": "nlp_sentiment_analysis",
+        "name": "Sentiment Analysis",
+        "section": "03_Natural_Language_Processing",
+        "category": "application",
+        "difficulty": "intermediate",
+        "prerequisites": [
+          "text_classification",
+          "neural_networks"
+        ],
+        "applications": [
+          "social_media_monitoring",
+          "customer_feedback",
+          "market_analysis"
+        ],
+        "implementations": [
+          "sentiment_classification",
+          "emotion_detection"
+        ],
+        "case_studies": [
+          "brand_monitoring",
+          "customer_sentiment"
+        ],
+        "tags": ["nlp", "sentiment", "classification", "text_analysis"]
+      }
+    },
+    "computer_vision": {
+      "object_detection": {
+        "id": "cv_object_detection",
+        "name": "Object Detection",
+        "section": "04_Computer_Vision",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "cnn",
+          "image_processing",
+          "neural_networks"
+        ],
+        "applications": [
+          "autonomous_driving",
+          "surveillance",
+          "robotics"
+        ],
+        "implementations": [
+          "yolo_architecture",
+          "rcnn_family",
+          "ssd_detection"
+        ],
+        "case_studies": [
+          "self_driving_cars",
+          "security_systems"
+        ],
+        "tags": ["computer_vision", "detection", "cnn", "yolo"]
+      },
+      "image_segmentation": {
+        "id": "cv_image_segmentation",
+        "name": "Image Segmentation",
+        "section": "04_Computer_Vision",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "cnn",
+          "object_detection"
+        ],
+        "applications": [
+          "medical_imaging",
+          "autonomous_driving",
+          "image_editing"
+        ],
+        "implementations": [
+          "unet_architecture",
+          "mask_rcnn",
+          "deeplab"
+        ],
+        "case_studies": [
+          "tumor_detection",
+          "autonomous_navigation"
+        ],
+        "tags": ["computer_vision", "segmentation", "medical", "unet"]
+      }
+    },
+    "generative_ai": {
+      "gan": {
+        "id": "generative_gan",
+        "name": "Generative Adversarial Networks",
+        "section": "05_Generative_AI",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "neural_networks",
+          "game_theory",
+          "optimization"
+        ],
+        "applications": [
+          "image_generation",
+          "style_transfer",
+          "data_augmentation"
+        ],
+        "implementations": [
+          "dcgan",
+          "stylegan",
+          "cyclegan"
+        ],
+        "case_studies": [
+          "art_generation",
+          "photo_realism"
+        ],
+        "tags": ["gan", "generative", "adversarial", "image_generation"]
+      },
+      "diffusion_models": {
+        "id": "generative_diffusion",
+        "name": "Diffusion Models",
+        "section": "05_Generative_AI",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "neural_networks",
+          "probability_theory",
+          "stochastic_processes"
+        ],
+        "applications": [
+          "image_generation",
+          "audio_generation",
+          "molecular_design"
+        ],
+        "implementations": [
+          "ddpm",
+          "stable_diffusion",
+          "midjourney_backend"
+        ],
+        "case_studies": [
+          "dall_e",
+          "midjourney",
+          "stability_ai"
+        ],
+        "tags": ["diffusion", "generative", "image", "denoising"]
+      }
+    },
+    "ai_agents": {
+      "reinforcement_learning": {
+        "id": "agents_reinforcement_learning",
+        "name": "Reinforcement Learning",
+        "section": "06_AI_Agents_and_Autonomous",
+        "category": "theory",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "probability_theory",
+          "markov_chains",
+          "optimization"
+        ],
+        "applications": [
+          "game_ai",
+          "robotics",
+          "autonomous_systems"
+        ],
+        "implementations": [
+          "q_learning",
+          "policy_gradients",
+          "deep_q_networks"
+        ],
+        "case_studies": [
+          "alphago",
+          "openai_five",
+          "robot_control"
+        ],
+        "tags": ["rl", "reinforcement", "agents", "decision_making"]
+      },
+      "multi_agent_systems": {
+        "id": "agents_multi_agent",
+        "name": "Multi-Agent Systems",
+        "section": "06_AI_Agents_and_Autonomous",
+        "category": "theory",
+        "difficulty": "expert",
+        "prerequisites": [
+          "reinforcement_learning",
+          "game_theory",
+          "distributed_systems"
+        ],
+        "applications": [
+          "swarm_robotics",
+          "traffic_control",
+          "financial_markets"
+        ],
+        "implementations": [
+          "marl_algorithms",
+          "cooperative_rl"
+        ],
+        "case_studies": [
+          "drone_swarm",
+          "autonomous_fleets"
+        ],
+        "tags": ["multi_agent", "cooperation", "competition", "swarm"]
+      }
+    },
+    "ethics": {
+      "ai_alignment": {
+        "id": "ethics_ai_alignment",
+        "name": "AI Alignment",
+        "section": "07_AI_Ethics_and_Safety",
+        "category": "theory",
+        "difficulty": "expert",
+        "prerequisites": [
+          "reinforcement_learning",
+          "game_theory",
+          "philosophy_of_ai"
+        ],
+        "applications": [
+          "safe_ai",
+          "value_learning",
+          "corrigibility"
+        ],
+        "implementations": [],
+        "case_studies": [
+          "alignment_research",
+          "ai_safety"
+        ],
+        "tags": ["ethics", "alignment", "safety", "values"]
+      },
+      "bias_fairness": {
+        "id": "ethics_bias_fairness",
+        "name": "Bias and Fairness in AI",
+        "section": "07_AI_Ethics_and_Safety",
+        "category": "theory",
+        "difficulty": "intermediate",
+        "prerequisites": [
+          "machine_learning_basics",
+          "statistics",
+          "social_impact"
+        ],
+        "applications": [
+          "fair_ml",
+          "bias_detection",
+          "equitable_ai"
+        ],
+        "implementations": [
+          "bias_mitigation",
+          "fairness_metrics"
+        ],
+        "case_studies": [
+          "hiring_bias",
+          "loan_approval"
+        ],
+        "tags": ["ethics", "bias", "fairness", "discrimination"]
+      }
+    },
+    "applications": {
+      "healthcare_ai": {
+        "id": "applications_healthcare",
+        "name": "Healthcare AI",
+        "section": "15_Specialized_Applications",
+        "category": "application",
+        "difficulty": "advanced",
+        "prerequisites": [
+          "cnn",
+          "medical_imaging",
+          "data_privacy"
+        ],
+        "applications": [
+          "disease_diagnosis",
+          "drug_discovery",
+          "personalized_medicine"
+        ],
+        "implementations": [
+          "medical_image_analysis",
+          "drug_design_ai"
+        ],
+        "case_studies": [
+          "cancer_detection",
+          "covid_analysis"
+        ],
+        "tags": ["healthcare", "medical", "diagnosis", "pharma"]
+      },
+      "autonomous_driving": {
+        "id": "applications_autonomous_driving",
+        "name": "Autonomous Driving",
+        "section": "15_Specialized_Applications",
+        "category": "application",
+        "difficulty": "expert",
+        "prerequisites": [
+          "computer_vision",
+          "reinforcement_learning",
+          "sensor_fusion"
+        ],
+        "applications": [
+          "self_driving_cars",
+          "transportation",
+          "mobility"
+        ],
+        "implementations": [
+          "tesla_autopilot",
+          "waymo_system"
+        ],
+        "case_studies": [
+          "autonomous_fleets",
+          "safety_systems"
+        ],
+        "tags": ["autonomous", "driving", "vehicles", "transportation"]
+      }
+    },
+    "emerging": {
+      "quantum_ml": {
+        "id": "emerging_quantum_ml",
+        "name": "Quantum Machine Learning",
+        "section": "12_Emerging_Research_2025",
+        "category": "theory",
+        "difficulty": "expert",
+        "prerequisites": [
+          "quantum_computing",
+          "linear_algebra",
+          "machine_learning_basics"
+        ],
+        "applications": [
+          "quantum_algorithms",
+          "optimization",
+          "cryptography"
+        ],
+        "implementations": [
+          "quantum_neural_networks",
+          "qml_algorithms"
+        ],
+        "case_studies": [
+          "quantum_advantage",
+          "ibm_quantum"
+        ],
+        "tags": ["quantum", "emerging", "algorithms", "computing"]
+      },
+      "neuromorphic_computing": {
+        "id": "emerging_neuromorphic",
+        "name": "Neuromorphic Computing",
+        "section": "12_Emerging_Research_2025",
+        "category": "theory",
+        "difficulty": "expert",
+        "prerequisites": [
+          "neural_networks",
+          "hardware_design",
+          "brain_inspired"
+        ],
+        "applications": [
+          "energy_efficient_ai",
+          "edge_computing",
+          "brain_simulation"
+        ],
+        "implementations": [
+          "spiking_neural_networks",
+          "neuromorphic_chips"
+        ],
+        "case_studies": [
+          "intel_loihi",
+          "ibm_true_north"
+        ],
+        "tags": ["neuromorphic", "hardware", "spiking", "energy_efficient"]
+      }
+    }
+  },
+  "relationships": [
+    {
+      "source": "foundational_linear_algebra",
+      "target": "deep_learning_neural_networks",
+      "type": "PREREQUISITE_OF",
+      "strength": 0.9
+    },
+    {
+      "source": "deep_learning_neural_networks",
+      "target": "deep_learning_transformers",
+      "type": "PREREQUISITE_OF",
+      "strength": 0.8
+    },
+    {
+      "source": "deep_learning_transformers",
+      "target": "nlp_language_models",
+      "type": "PREREQUISITE_OF",
+      "strength": 0.95
+    },
+    {
+      "source": "deep_learning_cnn",
+      "target": "cv_object_detection",
+      "type": "PREREQUISITE_OF",
+      "strength": 0.85
+    },
+    {
+      "source": "cv_object_detection",
+      "target": "applications_autonomous_driving",
+      "type": "APPLICATION_OF",
+      "strength": 0.8
+    },
+    {
+      "source": "agents_reinforcement_learning",
+      "target": "applications_autonomous_driving",
+      "type": "APPLICATION_OF",
+      "strength": 0.75
+    },
+    {
+      "source": "generative_diffusion",
+      "target": "nlp_language_models",
+      "type": "ALTERNATIVE_TO",
+      "strength": 0.6
+    },
+    {
+      "source": "ethics_ai_alignment",
+      "target": "agents_reinforcement_learning",
+      "type": "CONSTRAINS",
+      "strength": 0.7
+    }
+  ],
+  "learning_paths": {
+    "beginner_path": [
+      "foundational_linear_algebra",
+      "foundational_calculus_optimization",
+      "foundational_probability_theory",
+      "deep_learning_neural_networks",
+      "deep_learning_cnn"
+    ],
+    "nlp_specialist": [
+      "foundational_linear_algebra",
+      "deep_learning_neural_networks",
+      "deep_learning_transformers",
+      "nlp_language_models",
+      "nlp_sentiment_analysis"
+    ],
+    "cv_specialist": [
+      "foundational_linear_algebra",
+      "deep_learning_neural_networks",
+      "deep_learning_cnn",
+      "cv_object_detection",
+      "cv_image_segmentation"
+    ],
+    "ai_researcher": [
+      "foundational_linear_algebra",
+      "foundational_calculus_optimization",
+      "foundational_probability_theory",
+      "deep_learning_neural_networks",
+      "deep_learning_transformers",
+      "agents_reinforcement_learning",
+      "ethics_ai_alignment",
+      "emerging_quantum_ml"
+    ],
+    "practitioner_path": [
+      "foundational_linear_algebra",
+      "deep_learning_neural_networks",
+      "deep_learning_cnn",
+      "applications_healthcare",
+      "applications_autonomous_driving"
+    ]
+  }
+}
