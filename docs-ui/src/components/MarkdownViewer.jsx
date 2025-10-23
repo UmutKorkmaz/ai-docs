@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import 'highlight.js/styles/github-dark.css';
+import Breadcrumbs from './Breadcrumbs';
+import TableOfContents from './TableOfContents';
 
 function MarkdownViewer({ filePath }) {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -59,6 +63,34 @@ function MarkdownViewer({ filePath }) {
     }
   }, [filePath]);
 
+  // Component for rendering headings with IDs
+  const components = {
+    h1: ({ children, ...props }) => {
+      const id = `heading-${children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+      return <h1 id={id} {...props}>{children}</h1>;
+    },
+    h2: ({ children, ...props }) => {
+      const id = `heading-${children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+      return <h2 id={id} {...props}>{children}</h2>;
+    },
+    h3: ({ children, ...props }) => {
+      const id = `heading-${children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+      return <h3 id={id} {...props}>{children}</h3>;
+    },
+    h4: ({ children, ...props }) => {
+      const id = `heading-${children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+      return <h4 id={id} {...props}>{children}</h4>;
+    },
+    h5: ({ children, ...props }) => {
+      const id = `heading-${children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+      return <h5 id={id} {...props}>{children}</h5>;
+    },
+    h6: ({ children, ...props }) => {
+      const id = `heading-${children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+      return <h6 id={id} {...props}>{children}</h6>;
+    },
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -82,13 +114,20 @@ function MarkdownViewer({ filePath }) {
   }
 
   return (
-    <div className="markdown-content">
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight, rehypeRaw]}
-      >
-        {content}
-      </ReactMarkdown>
+    <div>
+      <Breadcrumbs path={location.pathname} />
+      <div className="flex gap-6">
+        <div className="flex-1 min-w-0 markdown-content">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeHighlight, rehypeRaw]}
+            components={components}
+          >
+            {content}
+          </ReactMarkdown>
+        </div>
+        <TableOfContents content={content} />
+      </div>
     </div>
   );
 }

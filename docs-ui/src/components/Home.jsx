@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { docsStructure } from '../docsConfig';
+import { docsStructure, examplesSections } from '../docsConfig';
 
 function Home() {
   return (
@@ -86,16 +86,16 @@ function Home() {
       {/* Main Sections */}
       <div>
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-          Documentation Sections
+          Core Documentation
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {docsStructure.slice(0, 15).map((section) => (
+          {docsStructure.map((section) => (
             <Link
               key={section.id}
               to={`/doc${section.path}`}
-              className="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
+              className="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors group"
             >
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {section.title}
               </h3>
               {section.children && section.children.length > 0 && (
@@ -106,15 +106,34 @@ function Home() {
             </Link>
           ))}
         </div>
-
-        {docsStructure.length > 15 && (
-          <div className="mt-6 text-center">
-            <p className="text-gray-600 dark:text-gray-400">
-              And {docsStructure.length - 15} more sections...
-            </p>
-          </div>
-        )}
       </div>
+
+      {/* Examples & Resources */}
+      {examplesSections && examplesSections.length > 0 && (
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            Examples & Resources
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {examplesSections.map((section) => (
+              <Link
+                key={section.id}
+                to={`/doc${section.path}`}
+                className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border border-blue-200 dark:border-blue-800 hover:border-blue-500 dark:hover:border-blue-400 transition-colors group"
+              >
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {section.title}
+                </h3>
+                {section.children && section.children.length > 0 && (
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {section.children.length} subsections
+                  </p>
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Features */}
       <div className="mt-16 grid md:grid-cols-2 gap-8">

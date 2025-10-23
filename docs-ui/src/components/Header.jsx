@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SearchBar from './SearchBar';
 
 function Header({ onMenuClick }) {
   const [isDark, setIsDark] = useState(
@@ -12,8 +13,8 @@ function Header({ onMenuClick }) {
 
   return (
     <header className="sticky top-0 z-30 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-      <div className="flex items-center justify-between px-4 py-3">
-        <div className="flex items-center space-x-4">
+      <div className="flex items-center justify-between px-4 py-3 gap-4">
+        <div className="flex items-center space-x-4 flex-shrink-0">
           <button
             onClick={onMenuClick}
             className="lg:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
@@ -23,17 +24,27 @@ function Header({ onMenuClick }) {
             </svg>
           </button>
 
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center lg:hidden">
+          <div className="hidden lg:flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white text-xl font-bold">AI</span>
             </div>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white lg:hidden">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">
               AI Documentation
             </h1>
           </div>
+
+          <div className="flex items-center space-x-2 lg:hidden">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white text-xl font-bold">AI</span>
+            </div>
+          </div>
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="hidden md:block flex-1 max-w-2xl">
+          <SearchBar />
+        </div>
+
+        <div className="flex items-center space-x-2 flex-shrink-0">
           <button
             onClick={toggleTheme}
             className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"

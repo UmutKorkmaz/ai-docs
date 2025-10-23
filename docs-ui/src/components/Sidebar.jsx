@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { docsStructure, additionalDocs } from '../docsConfig';
+import { docsStructure, additionalDocs, examplesSections } from '../docsConfig';
 
 function Sidebar({ isOpen, onClose }) {
   const [expandedSections, setExpandedSections] = useState({});
@@ -127,6 +127,18 @@ function Sidebar({ isOpen, onClose }) {
               {docsStructure.map(doc => renderDocItem(doc))}
             </div>
           </div>
+
+          {/* Examples & Resources */}
+          {examplesSections && examplesSections.length > 0 && (
+            <div className="mt-6">
+              <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                Examples & Resources
+              </h3>
+              <div className="space-y-1">
+                {examplesSections.map(doc => renderDocItem(doc))}
+              </div>
+            </div>
+          )}
         </div>
       </aside>
     </>
